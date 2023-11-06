@@ -1,5 +1,6 @@
 // Photos from https://citizenofnowhe.re/lines-of-the-city
 // import "./styles.css";
+import Image from "next/image";
 import { useRef } from "react";
 import {
   motion,
@@ -13,7 +14,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function Image({ id }: { id: number }) {
+function ImageParallex({ id }: { id: number }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
@@ -21,7 +22,7 @@ function Image({ id }: { id: number }) {
   return (
     <section>
       <div ref={ref}>
-        <img src={`/${id}.jpg`} alt="A London skyscraper" />
+        <Image src={`/${id}.jpg`} alt="A London skyscraper" width={300} height={300}/>
       </div>
       <motion.h2 style={{ y }}>{`#00${id}`}</motion.h2>
     </section>
@@ -39,7 +40,7 @@ const ParallexPage = () => {
   return (
     <>
       {[1, 2, 3, 4, 5].map((image) => (
-        <Image id={image} />
+        <ImageParallex id={image} />
       ))}
       <motion.div className="progress" style={{ scaleX }} />
     </>
