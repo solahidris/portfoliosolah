@@ -40,7 +40,7 @@ const ParallexPage = () => {
   return (
     <>
       {[1, 2, 3, 4, 5].map((image) => (
-        <ImageParallex id={image} />
+        <ImageParallex id={image} key={image}/>
       ))}
       <motion.div className="progress" style={{ scaleX }} />
     </>
