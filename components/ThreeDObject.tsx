@@ -8,6 +8,7 @@ import * as THREE from 'three';
 // const color = "#111111"; // black boxes
 const color = "#ffffff"; // white boxes
 
+// Small Component - Used in Scene
 const Icosahedron = () => (
   <mesh rotation-x={0.35}>
     <icosahedronGeometry args={[1, 0]} />
@@ -15,6 +16,7 @@ const Icosahedron = () => (
   </mesh>
 );
 
+// Small Component - Used in Scene
 const Star = ({ p }: { p: number }) => {
   const ref = useRef<THREE.Mesh>(null); // Use RefObject of type Mesh
 
@@ -31,12 +33,14 @@ const Star = ({ p }: { p: number }) => {
 
   return (
     <mesh ref={ref}>
-      <boxGeometry args={[0.05, 0.05, 0.05]} />
+      {/* Star - Box Size */}
+      <boxGeometry args={[0.05, 0.05, 0.05]} /> 
       <meshBasicMaterial wireframe color={color} />
     </mesh>
   );
 };
 
+// Main Component
 function Scene({ numStars = 200 }) {
   const gl = useThree((state) => state.gl);
   const { scrollYProgress } = useScroll();
@@ -73,9 +77,10 @@ function Scene({ numStars = 200 }) {
   );
 }
 
+// Export Component
 export default function ThreeDObject() {
   return (
-    <div className="container">
+    <div className="container min-w-[100vw]">
       <Canvas gl={{ antialias: false }}>
         <Scene />
       </Canvas>
