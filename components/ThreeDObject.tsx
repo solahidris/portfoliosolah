@@ -5,7 +5,8 @@ import { degreesToRadians, progress, mix } from "popmotion";
 import * as THREE from 'three';
 
 
-const color = "#111111";
+// const color = "#111111"; // black boxes
+const color = "#ffffff"; // white boxes
 
 const Icosahedron = () => (
   <mesh rotation-x={0.35}>
@@ -36,7 +37,7 @@ const Star = ({ p }: { p: number }) => {
   );
 };
 
-function Scene({ numStars = 100 }) {
+function Scene({ numStars = 200 }) {
   const gl = useThree((state) => state.gl);
   const { scrollYProgress } = useScroll();
   const yAngle = useTransform(

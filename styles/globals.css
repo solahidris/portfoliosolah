@@ -43,8 +43,8 @@ body {
   --orange: #fd7702;
   --yellow: #ffbb00;
 
-  --background: var(--yellow);
-  --accent: var(--black);
+  --background: var(--ash-black);
+  --accent: var(--sky);
 
   margin: 0;
   padding: 0;
