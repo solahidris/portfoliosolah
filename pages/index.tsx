@@ -4,7 +4,7 @@ import ThreeDObject from "@/components/ThreeDObject";
 
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-[1000vh]">
       <ThreeDObject />
     </div>
   )
