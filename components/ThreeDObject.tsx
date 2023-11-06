@@ -6,13 +6,14 @@ import * as THREE from 'three';
 
 
 // const color = "#111111"; // black boxes
-const color = "#ffffff"; // white boxes
+// const color = "#ffffff"; // white boxes
+const color = "#22dddd"; // green boxes
 
 // Small Component - Used in Scene
 const Icosahedron = () => (
   <mesh rotation-x={0.35}>
     <icosahedronGeometry args={[1, 0]} />
-    <meshBasicMaterial wireframe color={color} />
+    <meshBasicMaterial wireframe color={color} opacity={0.2} transparent={true}/>
   </mesh>
 );
 
@@ -35,7 +36,7 @@ const Star = ({ p }: { p: number }) => {
     <mesh ref={ref}>
       {/* Star - Box Size */}
       <boxGeometry args={[0.05, 0.05, 0.05]} /> 
-      <meshBasicMaterial wireframe color={color} />
+      <meshBasicMaterial wireframe color={color} opacity={0.2} transparent={true}/>
     </mesh>
   );
 };
