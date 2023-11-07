@@ -1,3 +1,5 @@
+// directory: ./components/BlobAnimation.tsx
+
 import React from "react";
 import profilepic from "../public/profilepic.jpg";
 

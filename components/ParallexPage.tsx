@@ -9,6 +9,22 @@ import {
   useTransform,
   MotionValue
 } from "framer-motion";
+import BlobAnimation from "./BlobAnimation";
+
+const BlobImageParallax = ({ id }: { id: number }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 300);
+
+  return (
+    <section className="w-full w-[60%] lg:w-[50%]">
+      <div className="w-full bg-transparent">
+        <BlobAnimation /> {/* Use the BlobAnimation component here */}
+      </div>
+      <motion.h2 style={{ y }} className="absolute right-0 lg:right-20">{`#00${id}`}</motion.h2>
+    </section>
+  );
+};
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -97,7 +113,9 @@ const ParallexPage = () => {
       {imageData.map((data) => (
         <div key={data.id} className="flex">
           {data.content}
-          <ImageParallex id={data.id} />
+          {data.id === 1 ? <BlobImageParallax id={data.id} /> : <ImageParallex id={data.id} />}
+          {/* Use BlobImageParallax for the first section and ImageParallex for other sections */}
+          {/* <ImageParallex id={data.id} /> */}
         </div>
       ))}
       <motion.div className="progress" style={{ scaleX }} />
