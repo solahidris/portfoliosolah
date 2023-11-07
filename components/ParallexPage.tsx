@@ -9,25 +9,22 @@ import {
   useTransform,
   MotionValue
 } from "framer-motion";
-import { imageData, ImageDataItem } from './ImageDataItem';
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-// export function ImageParallex({ id }: { id: number }) {
-export function ImageParallex({ id, title, subtitle }: { id: number, title: string, subtitle:string }) {
-
+function ImageParallex({ id }: { id: number }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
 
   return (
-    <section>
+    <section className="w-full w-[100%]">
       <div ref={ref}>
-        <Image src={`/${id}.jpg`} alt="A London skyscraper" width={300} height={300}/>
+        <Image src={`/${id}.jpg`} alt="A London skyscraper" width={300} height={300} className="min-w-[300px] min-h-[400px]"/>
       </div>
-      <motion.h2 style={{ y }}>{`#00${id}`}</motion.h2>
+      <motion.h2 style={{ y }} className="absolute right-0">{`#00${id}`}</motion.h2>
     </section>
   );
 }
@@ -40,16 +37,68 @@ const ParallexPage = () => {
     restDelta: 0.001
   });
 
+  const imageData = [
+    {
+      id: 1,
+      title: "Title 1",
+      subtitle: "Subtitle 1",
+      content: (
+        <div className="pl-5 flex flex-col justify-center items-start">
+          <p className="">Hi, I&#39;m Solah</p>
+          <p className="">This is my Portfolio</p>
+        </div>
+      ),
+    },
+    {
+      id: 2,
+      title: "Title 2",
+      subtitle: "Subtitle 2",
+      content: (
+        <div className="pl-5 flex flex-col justify-center items-start">
+          <p className="">I&#39;m a Frontend Developer</p>
+          <p className="">based in humble Malaysia</p>
+        </div>
+      ),
+    },
+    {
+      id: 3,
+      title: "Title 3",
+      subtitle: "Subtitle 3",
+      content: (
+        <div className="pl-5 flex flex-col justify-center items-start">
+          <p className="">I can code stuff. Mostly in Nextjs, Typescript &#38; Firebase GCP</p>
+        </div>
+      ),
+    },
+    {
+      id: 4,
+      title: "Title 4",
+      subtitle: "Subtitle 4",
+      content: (
+        <div className="pl-5 flex flex-col justify-center items-start">
+          <p className="">kasutkicks.com - a sneaker marketplace</p>
+        </div>
+      ),
+    },
+    {
+      id: 5,
+      title: "Title 5",
+      subtitle: "Subtitle 5",
+      content: (
+        <div className="pl-5 flex flex-col justify-center items-start">
+          <p className="">sharelinks.info - a link in bio</p>
+        </div>
+      ),
+    },
+  ];
+
   return (
-    <div>
+    <div className="flex flex-col">
       {imageData.map((data) => (
-        <ImageDataItem
-          key={data.id}
-          id={data.id}
-          title={data.title}
-          subtitle={data.subtitle}
-          content={data.content}
-        />
+        <div key={data.id} className="flex">
+          {data.content}
+          <ImageParallex id={data.id} />
+        </div>
       ))}
       <motion.div className="progress" style={{ scaleX }} />
     </div>
