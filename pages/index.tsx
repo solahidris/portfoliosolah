@@ -6,7 +6,7 @@ import ParallexPage from "@/components/ParallexPage";
 export default function Home() {
   return (
     <div className="min-h-[1000vh] w-[100vw]">
-      {/* <ThreeDObject /> */}
+      <ThreeDObject />
       <ParallexPage />
     </div>
   )

@@ -20,11 +20,11 @@ function ImageParallex({ id }: { id: number }) {
   const y = useParallax(scrollYProgress, 300);
 
   return (
-    <section className="w-full w-[100%]">
-      <div ref={ref}>
-        <Image src={`/${id}.jpg`} alt="A London skyscraper" width={300} height={300} className="min-w-[300px] min-h-[400px]"/>
+    <section className="w-full w-[60%] lg:w-[50%]">
+      <div ref={ref} className="w-full bg-transparent">
+        <Image src={`/${id}.jpg`} alt="A London skyscraper" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>
       </div>
-      <motion.h2 style={{ y }} className="absolute right-0">{`#00${id}`}</motion.h2>
+      <motion.h2 style={{ y }} className="absolute right-0 lg:right-20">{`#00${id}`}</motion.h2>
     </section>
   );
 }
@@ -43,7 +43,7 @@ const ParallexPage = () => {
       title: "Title 1",
       subtitle: "Subtitle 1",
       content: (
-        <div className="pl-5 flex flex-col justify-center items-start">
+        <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="">Hi, I&#39;m Solah</p>
           <p className="">This is my Portfolio</p>
         </div>
@@ -54,9 +54,8 @@ const ParallexPage = () => {
       title: "Title 2",
       subtitle: "Subtitle 2",
       content: (
-        <div className="pl-5 flex flex-col justify-center items-start">
+        <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="">I&#39;m a Frontend Developer</p>
-          <p className="">based in humble Malaysia</p>
         </div>
       ),
     },
@@ -65,8 +64,8 @@ const ParallexPage = () => {
       title: "Title 3",
       subtitle: "Subtitle 3",
       content: (
-        <div className="pl-5 flex flex-col justify-center items-start">
-          <p className="">I can code stuff. Mostly in Nextjs, Typescript &#38; Firebase GCP</p>
+        <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+          <p className="">I can code stuff. Mostly in Nextjs, Typescript & Firebase GCP</p>
         </div>
       ),
     },
@@ -75,7 +74,7 @@ const ParallexPage = () => {
       title: "Title 4",
       subtitle: "Subtitle 4",
       content: (
-        <div className="pl-5 flex flex-col justify-center items-start">
+        <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="">kasutkicks.com - a sneaker marketplace</p>
         </div>
       ),
@@ -85,7 +84,7 @@ const ParallexPage = () => {
       title: "Title 5",
       subtitle: "Subtitle 5",
       content: (
-        <div className="pl-5 flex flex-col justify-center items-start">
+        <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="">sharelinks.info - a link in bio</p>
         </div>
       ),
