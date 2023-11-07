@@ -44,8 +44,9 @@ const ParallexPage = () => {
       subtitle: "Subtitle 1",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="">Hi, I&#39;m Solah</p>
-          <p className="">This is my Portfolio</p>
+          <p className="font-mono">Hi, I&#39;m Sol.</p>
+          <p className="font-mono">A self-taught Front-end Developer</p>
+          <p className="font-mono">based in Kuala Lumpur, Malaysia. 📍</p>
         </div>
       ),
     },
