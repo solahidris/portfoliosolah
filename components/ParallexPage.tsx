@@ -38,12 +38,18 @@ const ParallexPage = () => {
   });
 
   return (
-    <>
+    <div>
       {[1, 2, 3, 4, 5].map((image) => (
-        <ImageParallex id={image} key={image}/>
+        <div key={image} className="flex justify-center">
+          <div className="flex flex-col justify-center items-start">
+            <p className="capitalize">Hi, im solah</p>
+            <p className="capitalize">and this is my portfolio</p>
+          </div>
+          <ImageParallex id={image} />
+        </div>
       ))}
       <motion.div className="progress" style={{ scaleX }} />
-    </>
+    </div>
   );
 }
 
