@@ -1,5 +1,5 @@
-// Photos from https://citizenofnowhe.re/lines-of-the-city
-// import "./styles.css";
+// directory: ./components/ParallexPage.tsx
+
 import Image from "next/image";
 import { useRef } from "react";
 import {
@@ -9,12 +9,15 @@ import {
   useTransform,
   MotionValue
 } from "framer-motion";
+import { imageData, ImageDataItem } from './ImageDataItem';
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function ImageParallex({ id }: { id: number }) {
+// export function ImageParallex({ id }: { id: number }) {
+export function ImageParallex({ id, title, subtitle }: { id: number, title: string, subtitle:string }) {
+
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
@@ -39,14 +42,14 @@ const ParallexPage = () => {
 
   return (
     <div>
-      {[1, 2, 3, 4, 5].map((image) => (
-        <div key={image} className="flex justify-center">
-          <div className="flex flex-col justify-center items-start">
-            <p className="capitalize">Hi, im solah</p>
-            <p className="capitalize">and this is my portfolio</p>
-          </div>
-          <ImageParallex id={image} />
-        </div>
+      {imageData.map((data) => (
+        <ImageDataItem
+          key={data.id}
+          id={data.id}
+          title={data.title}
+          subtitle={data.subtitle}
+          content={data.content}
+        />
       ))}
       <motion.div className="progress" style={{ scaleX }} />
     </div>
