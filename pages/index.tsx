@@ -8,6 +8,7 @@ export default function Home() {
     <div className="min-h-[1000vh] w-[100vw]">
       <ThreeDObject />
       <ParallexPage />
+      
     </div>
   )
 }
