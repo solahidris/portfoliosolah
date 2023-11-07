@@ -21,7 +21,7 @@ const BlobImageParallax = ({ id }: { id: number }) => {
       <div className="w-full bg-transparent">
         <BlobAnimation /> {/* Use the BlobAnimation component here */}
       </div>
-      <motion.h2 style={{ y }} className="absolute right-0 lg:right-20">{`#00${id}`}</motion.h2>
+      <motion.h2 style={{ y }} className="absolute top-[85vh] right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
     </section>
   );
 };
@@ -40,7 +40,7 @@ function ImageParallex({ id }: { id: number }) {
       <div ref={ref} className="w-full bg-transparent">
         <Image src={`/${id}.jpg`} alt="A London skyscraper" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>
       </div>
-      <motion.h2 style={{ y }} className="absolute right-0 lg:right-20">{`#00${id}`}</motion.h2>
+      <motion.h2 style={{ y }} className="absolute right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
     </section>
   );
 }
@@ -60,9 +60,9 @@ const ParallexPage = () => {
       subtitle: "Subtitle 1",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono">Hi, I&#39;m Sol.</p>
-          <p className="font-mono">A self-taught Front-end Developer</p>
-          <p className="font-mono">based in Kuala Lumpur, Malaysia. 📍</p>
+          <p className="font-mono text-xs">Hi, I&#39;m Sol.</p>
+          <p className="font-mono text-xs">A self-taught Front-end Developer</p>
+          <p className="font-mono text-xs">based in Kuala Lumpur, Malaysia. 📍</p>
         </div>
       ),
     },
@@ -72,7 +72,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 2",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="">I&#39;m a Frontend Developer</p>
+          <p className="font-mono text-xs">I&#39;m a Frontend Developer</p>
         </div>
       ),
     },
@@ -82,7 +82,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 3",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="">I can code stuff. Mostly in Nextjs, Typescript & Firebase GCP</p>
+          <p className="font-mono text-xs">I can code stuff. Mostly in Nextjs, Typescript & Firebase GCP</p>
         </div>
       ),
     },
@@ -92,7 +92,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 4",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="">kasutkicks.com - a sneaker marketplace</p>
+          <p className="font-mono text-xs">kasutkicks.com - a sneaker marketplace</p>
         </div>
       ),
     },
@@ -102,7 +102,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 5",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="">sharelinks.info - a link in bio</p>
+          <p className="font-mono text-xs">sharelinks.info - a link in bio</p>
         </div>
       ),
     },
@@ -113,9 +113,8 @@ const ParallexPage = () => {
       {imageData.map((data) => (
         <div key={data.id} className="flex">
           {data.content}
-          {data.id === 1 ? <BlobImageParallax id={data.id} /> : <ImageParallex id={data.id} />}
           {/* Use BlobImageParallax for the first section and ImageParallex for other sections */}
-          {/* <ImageParallex id={data.id} /> */}
+          {data.id === 1 ? <BlobImageParallax id={data.id} /> : <ImageParallex id={data.id} />}
         </div>
       ))}
       <motion.div className="progress" style={{ scaleX }} />
