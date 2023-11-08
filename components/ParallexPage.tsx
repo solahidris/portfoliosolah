@@ -40,7 +40,7 @@ function ImageParallex({ id }: { id: number }) {
 
   return (
     <section className="w-full w-[60%] lg:w-[50%]">
-      <div ref={ref} className="w-full bg-transparent">
+      <div ref={ref} className="w-full bg-transparent lg:ml-[-180px]">
         <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>
       </div>
       <motion.h2 style={{ y }} className="absolute right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
@@ -178,17 +178,16 @@ const ParallexPage = () => {
       title: "Title 7",
       subtitle: "Subtitle 7",
       content: (
-        // <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-start items-start lg:items-end">
         <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-3xl">Contact</p>
-          <div className="flex flex-col">
+          <p className="font-mono text-3xl justify-start lg:mr-[140px]">Contact</p>
+          <div className="flex flex-col gap-6">
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
                 <button value="emailSection" onClick={() => contactSectionHandler("emailSection")}>
                   <div className="flex">
                     <InboxIcon className="text-white bg-gradient-to-r from-sky-600 to-sky-400 rounded-full self-center p-[0.7rem] w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
-                    <div className="flex flex-col ml-2 items-start">
-                      <p className="text-white font-mono font-bold mx-1 px-3 lg:text-[1.6rem] tracking-widest">Email</p>
-                      <p className="bg-blue-300/10 rounded text-white font-mono text-[0.8rem] lg:text-[0.7rem] mx-4 px-3 py-1 tracking-widest">solah.eth@gmail.com</p>
+                    <div className="flex flex-col ml-4 items-start h-[60px]">
+                      <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Email</span>
+                      <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest">solah.eth@gmail.com</span>
                     </div>
                   </div>
                 </button>
@@ -198,9 +197,9 @@ const ParallexPage = () => {
                 <button value="phoneSection" onClick={() => contactSectionHandler("phoneSection")}>
                   <div className="flex">
                     <PhoneIcon className="text-white bg-gradient-to-r from-emerald-600 to-emerald-400 rounded-full self-center p-[0.7rem] w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
-                    <div className="flex flex-col ml-2 items-start">
-                      <p className="text-white font-mono font-bold self-startt mx-1 px-3 lg:text-[1.6rem] tracking-widest">Phone</p>
-                      <p className="bg-blue-300/10 rounded text-white font-mono text-[0.8rem] lg:text-[0.7rem] self-centerr mx-4 px-3 py-1 tracking-widest">+60127710626</p>
+                    <div className="flex flex-col ml-4 items-start h-[60px]">
+                      <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Phone</span>
+                      <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest">+60127710626</span>
                     </div>
                   </div>
                 </button>
