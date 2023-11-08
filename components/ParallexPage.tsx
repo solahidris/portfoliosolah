@@ -10,6 +10,7 @@ import {
   MotionValue
 } from "framer-motion";
 import BlobAnimation from "./BlobAnimation";
+import RightMenu from "./RightMenu";
 
 const BlobImageParallax = ({ id }: { id: number }) => {
   const ref = useRef(null);
@@ -52,6 +53,11 @@ const ParallexPage = () => {
     damping: 30,
     restDelta: 0.001
   });
+
+  const scrollToSection = (sectionId: string) => {
+    // Implement the logic to scroll to the specified section
+    // You can use JavaScript or a third-party library for smooth scrolling
+  };
 
   const imageData = [
     {
@@ -110,6 +116,9 @@ const ParallexPage = () => {
 
   return (
     <div className="flex flex-col">
+      <div className="absolute bg-red-300 w-full flex justify-center px-10">
+        <RightMenu scrollToSection={scrollToSection} />
+      </div>
       {imageData.map((data) => (
         <div key={data.id} className="flex">
           {data.content}

@@ -42,25 +42,25 @@ const RightMenu: React.FC<RightMenuProps> = ({ scrollToSection }) => {
     {
       name: 'Home',
       description: "Let's Start Here",
-      ref: 'homeDiv',
+      ref: 'homeDiv', // This is the section ID you want to scroll to
       icon: HomeIcon,
     },
     {
       name: 'About Me',
       description: 'A Brief Story to Understand Me as a Person',
-      ref: 'aboutDiv',
+      ref: 'aboutDiv', // This is the section ID you want to scroll to
       icon: IdentificationIcon,
     },
     {
       name: 'Projects',
       description: 'My Programming Journey',
-      ref: 'projectsDiv',
+      ref: 'projectsDiv', // This is the section ID you want to scroll to
       icon: CommandLineIcon,
     },
     {
       name: 'Contact',
       description: "Let's Get Connected",
-      ref: 'contactDiv',
+      ref: 'contactDiv', // This is the section ID you want to scroll to
       icon: ChatBubbleLeftRightIcon,
     },
   ];
@@ -97,14 +97,14 @@ const RightMenu: React.FC<RightMenuProps> = ({ scrollToSection }) => {
                   key={item.name}
                   className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
                 >
-                  <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover-bg-white">
+                  <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                     <item.icon
                       className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                       aria-hidden="true"
                     />
                   </div>
                   <div>
-                    <a href={item.href} className="font-semibold text-gray-900">
+                    <a className="font-semibold text-gray-900 cursor-pointer">
                       {item.name}
                       <span className="absolute inset-0" />
                     </a>
@@ -117,8 +117,7 @@ const RightMenu: React.FC<RightMenuProps> = ({ scrollToSection }) => {
               {callsToAction.map((item) => (
                 <a
                   key={item.name}
-                  href={item.href}
-                  className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover-bg-gray-100"
+                  className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100"
                   onClick={(event) => phoneMenuHandler(event, item.ref)}
                 >
                   <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
