@@ -163,7 +163,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 6",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-           <p className="font-mono text-xs">Things I've coded for fun / iv test previously</p>
+           <p className="font-mono text-xs">Things I&#39;ve coded for fun / iv test previously</p>
           <div className="flex gap-2 flex-wrap">
             <a href="https://moviereviewsmy.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">A - a movie ranking web</a>
             <a href="https://sayapniaga.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">B - a car dealership MVP</a>
