@@ -66,9 +66,13 @@ const ParallexPage = () => {
       subtitle: "Subtitle 1",
       content: (
         <div className="w-[40%] lg:w-[50%] ml-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xs">Hi, I&#39;m Sol.</p>
+          <p className="font-mono text-xs">Hi, I&#39;m Sol</p>
           <p className="font-mono text-xs">A self taught Front-end Developer</p>
-          <p className="font-mono text-xs">based in Kuala Lumpur, Malaysia. 📍</p>
+          <div className="flex flex-col lg:flex-row lg:gap-2">
+            <span className="font-mono text-xs">based in</span>
+            <span className="font-mono text-xs">Kuala Lumpur,</span>
+            <span className="font-mono text-xs">Malaysia 📍</span>
+          </div>
         </div>
       ),
     },
@@ -78,7 +82,9 @@ const ParallexPage = () => {
       subtitle: "Subtitle 2",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xs">I&#39;m a Frontend Developer</p>
+          <p className="font-mono text-xs">These are my Tech Stacks</p>
+          <p className="font-mono text-xs">I can make full stack applications</p>
+          <p className="font-mono text-xs">But I enjoy doing frontend just a bit more</p>
         </div>
       ),
     },
@@ -88,7 +94,9 @@ const ParallexPage = () => {
       subtitle: "Subtitle 3",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xs">I can code stuff. Mostly in Nextjs, Typescript & Firebase GCP</p>
+          <p className="font-mono text-xs">Project 2023-A</p>
+          <p className="font-mono text-xs">kasutkicks.com</p>
+          <p className="font-mono text-xs">- a sneaker marketplace with a price checker</p>
         </div>
       ),
     },
@@ -98,7 +106,9 @@ const ParallexPage = () => {
       subtitle: "Subtitle 4",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xs">kasutkicks.com - a sneaker marketplace</p>
+          <p className="font-mono text-xs">Project 2023-B</p>
+          <p className="font-mono text-xs">sharelinks.info</p>
+          <p className="font-mono text-xs">- a link in bio</p>
         </div>
       ),
     },
@@ -108,7 +118,9 @@ const ParallexPage = () => {
       subtitle: "Subtitle 5",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xs">sharelinks.info - a link in bio</p>
+           <p className="font-mono text-xs">Project 2023-C</p>
+          <p className="font-mono text-xs">solat.eth</p>
+          <p className="font-mono text-xs">- a react native prayer time app</p>
         </div>
       ),
     },
