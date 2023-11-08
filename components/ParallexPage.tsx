@@ -18,7 +18,7 @@ const BlobImageParallax = ({ id }: { id: number }) => {
 
   return (
     <section className="w-full w-[60%] lg:w-[50%]">
-      <div className="w-full bg-transparent">
+      <div className="w-full bg-transparent flex items-center">
         <BlobAnimation /> {/* Use the BlobAnimation component here */}
       </div>
       <motion.h2 style={{ y }} className="absolute top-[85vh] right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
