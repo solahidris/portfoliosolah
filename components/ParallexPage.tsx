@@ -204,16 +204,19 @@ const ParallexPage = () => {
                   </div>
                 </button>
               </motion.div>
+
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
+                  <div className="flex">
+                    <MapIcon className="text-white bg-gradient-to-r from-amber-600 to-amber-400 rounded-full self-center p-[0.7rem] min-w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
+                    <div className="flex flex-col ml-4 items-start h-[60px] gap-2">
+                      <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Location</span>
+                      <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest text-start">Kuala Lumpur, Malaysia 📍</span>
+                      <span className="flex items-center text-white font-mono text-[10px] h-[30px] text-[8px] px-4 tracking-widest text-start">Okay with relocating ✅</span>
+                    </div>
+                  </div>
+              </motion.div>
             </div>
 
-            {/* <div className="flex lg:justify-start">
-              <MapIcon className="text-white bg-gradient-to-r from-amber-600 to-amber-400 rounded-full self-center p-[0.7rem] w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
-              <div className="flex flex-col ml-2">
-                <p className="text-white font-mono font-bold self-start mx-4 px-3 py-1 lg:text-[1.6rem] tracking-widest">Location</p>
-                <p className="bg-blue-300/10 rounded text-white font-mono text-[0.8rem] self-center lg:text-[0.7rem] ml-4 px-3 py-1 tracking-widest">Kuala Lumpur, Malaysia 📍</p>
-                <p className="text-white font-mono text-[0.6rem] self-start mx-4 px-3 py-1 tracking-widest lg:text-[0.5rem]">Okay with relocating ✅ </p>
-              </div>
-            </div> */}
         </div>
       ),
     },
@@ -221,9 +224,9 @@ const ParallexPage = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="">
+      <motion.div whileTap={{scale: 0.95}} className="fixed w-full z-40">
         <RightMenu scrollToSection={scrollToSection} />
-      </div>
+      </motion.div>
       {imageData.map((data) => (
         <div key={data.id} className="flex">
           {data.content}
