@@ -1,7 +1,7 @@
 // directory: ./components/BlobAnimation.tsx
 
 import React from "react";
-import profilepic from "../public/profilepic.jpg";
+import profilepic from "../public/profilepic.png";
 
 const BlobAnimation = () => {
   return (

@@ -40,33 +40,33 @@ const RightMenu: React.FC<RightMenuProps> = ({ scrollToSection }) => {
 
   const solutions = [
     {
-      name: 'Home',
+      name: "Home",
       description: "Let's Start Here",
-      ref: 'homeDiv', // This is the section ID you want to scroll to
+      ref: "homeDiv", // This is the section ID you want to scroll to
       icon: HomeIcon,
     },
     {
-      name: 'About Me',
-      description: 'A Brief Story to Understand Me as a Person',
-      ref: 'aboutDiv', // This is the section ID you want to scroll to
+      name: "Tech Stack",
+      description: "Things I use to code features",
+      ref: "techStackDiv", // This is the section ID you want to scroll to
       icon: IdentificationIcon,
     },
     {
-      name: 'Projects',
-      description: 'My Programming Journey',
-      ref: 'projectsDiv', // This is the section ID you want to scroll to
+      name: "Projects",
+      description: "Solutions I've made to my own problems",
+      ref: "projectsDiv", // This is the section ID you want to scroll to
       icon: CommandLineIcon,
     },
     {
-      name: 'Contact',
+      name: "Contact",
       description: "Let's Get Connected",
-      ref: 'contactDiv', // This is the section ID you want to scroll to
+      ref: "contactDiv", // This is the section ID you want to scroll to
       icon: ChatBubbleLeftRightIcon,
     },
   ];
   const callsToAction = [
-    { name: 'Email', ref: 'emailDiv', icon: InboxIcon },
-    { name: 'Phone', ref: 'phoneDiv', icon: PhoneIcon },
+    { name: "Email", ref: "emailDiv", icon: InboxIcon },
+    { name: "Phone", ref: "phoneDiv", icon: PhoneIcon },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -77,7 +77,7 @@ const RightMenu: React.FC<RightMenuProps> = ({ scrollToSection }) => {
         className="inline-flex items-center gap-x-1 text-xs font-mono leading-6 text-white absolute z-40 bg-neutral-900/25 w-full flex justify-center px-10 py-4 shadow-md"
         onClick={() => setIsOpen(!isOpen)} // Toggle the menu on click
       >
-        <span className="font-mono ">sol.dev</span>
+        <span className="font-mono ">solah.eth</span>
         <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
       </Popover.Button>
 
