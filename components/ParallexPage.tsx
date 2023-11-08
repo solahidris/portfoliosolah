@@ -178,7 +178,8 @@ const ParallexPage = () => {
       title: "Title 7",
       subtitle: "Subtitle 7",
       content: (
-        <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-start items-start lg:items-end">
+        // <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-start items-start lg:items-end">
+        <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="font-mono text-3xl">Contact</p>
           <div className="flex flex-col">
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
