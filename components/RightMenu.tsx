@@ -1,16 +1,7 @@
 import { Fragment, useState } from 'react';
 import { Popover, Transition } from '@headlessui/react';
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  InboxIcon,
-} from '@heroicons/react/20/solid';
-import {
-  HomeIcon,
-  IdentificationIcon,
-  ChatBubbleLeftRightIcon,
-  CommandLineIcon,
-} from '@heroicons/react/24/outline';
+import { ChevronDownIcon, PhoneIcon, InboxIcon,} from '@heroicons/react/20/solid';
+import { HomeIcon, IdentificationIcon, ChatBubbleLeftRightIcon, CommandLineIcon,} from '@heroicons/react/24/outline';
 
 interface RightMenuProps {
   scrollToSection: (ref: string) => void;
@@ -20,6 +11,7 @@ const RightMenu: React.FC<RightMenuProps> = ({ scrollToSection }) => {
   const menuRouteHandler = (ref: string) => {
     if (scrollToSection) {
       scrollToSection(ref);
+      setIsOpen(false); // Close the menu after clicking a menu item
     }
   };
 
@@ -82,7 +74,7 @@ const RightMenu: React.FC<RightMenuProps> = ({ scrollToSection }) => {
       </Popover.Button>
 
       <Transition
-        show={isOpen}
+        show={isOpen} // Show the menu if `isOpen` is true
         as={Fragment}
         enter="transition ease-out duration-500"
         enterFrom="opacity-0 translate-y-1"
