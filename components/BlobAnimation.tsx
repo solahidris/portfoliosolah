@@ -31,10 +31,10 @@ const BlobAnimation = () => {
           </path>
         </clipPath>
         <image
-          x="0"
-          y="0"
-          width="100%"
-          height="100%"
+          x="-30"
+          y="-30"
+          width="110%"
+          height="110%"
           clipPath="url(#shape)"
           xlinkHref={profilepic.src}
           preserveAspectRatio="none"

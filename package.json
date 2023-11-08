@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "@react-three/fiber": "^8.15.9",
     "framer-motion": "^10.16.4",
     "framer-motion-3d": "^10.16.4",
