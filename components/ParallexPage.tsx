@@ -2,16 +2,10 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  MotionValue
-} from "framer-motion";
+import { motion, useScroll, useSpring, useTransform, MotionValue } from "framer-motion";
 import BlobAnimation from "./BlobAnimation";
 import RightMenu from "./RightMenu";
-import { MapIcon, InboxIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import { MapPinIcon, InboxIcon, PhoneIcon, ChevronDoubleUpIcon } from "@heroicons/react/20/solid";
 
 
 const BlobImageParallax = ({ id }: { id: number }) => {
@@ -99,12 +93,14 @@ const ParallexPage = () => {
       subtitle: "Subtitle 1",
       content: (
         <div ref={homeRef} className="w-[40%] lg:w-[50%] ml-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xs">Hi, I&#39;m Sol</p>
-          <p className="font-mono text-xs">A self taught Front-end Developer</p>
-          <div className="flex flex-col lg:flex-row lg:gap-2">
-            <span className="font-mono text-xs">based in</span>
-            <span className="font-mono text-xs">Kuala Lumpur,</span>
-            <span className="font-mono text-xs">Malaysia 📍</span>
+          <div className="absolute bg-neutral-900/[85%] w-[35%] p-2 rounded">
+            <p className="font-mono text-xs">Hi, I&#39;m Sol</p>
+            <p className="font-mono text-xs">A self taught Front-end Developer</p>
+            <div className="flex flex-col lg:flex-row lg:gap-2">
+              <span className="font-mono text-xs">based in</span>
+              <span className="font-mono text-xs">Kuala Lumpur,</span>
+              <span className="font-mono text-xs">Malaysia 📍</span>
+            </div>
           </div>
         </div>
       ),
@@ -115,9 +111,11 @@ const ParallexPage = () => {
       subtitle: "Subtitle 2",
       content: (
         <div ref={techStackRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xs">These are my Tech Stacks</p>
-          <p className="font-mono text-xs">I can make full stack applications</p>
-          <p className="font-mono text-xs">But I enjoy doing frontend just a bit more</p>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
+            <p className="font-mono text-xs">These are my Tech Stacks</p>
+            <p className="font-mono text-xs">I can make full stack applications</p>
+            <p className="font-mono text-xs">But I enjoy doing frontend just a bit more</p>
+          </div>
         </div>
       ),
     },
@@ -127,9 +125,11 @@ const ParallexPage = () => {
       subtitle: "Subtitle 3",
       content: (
         <div ref={projectsRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xs">Project 2023-A</p>
-          <p className="font-mono text-xs">kasutkicks.com</p>
-          <p className="font-mono text-xs">- a sneaker marketplace with a price checker</p>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
+            <p className="font-mono text-xs">Project/ 2023-A</p>
+            <p className="font-mono text-xs">kasutkicks .com</p>
+            <p className="font-mono text-xs">- a sneaker marketplace with a price checker</p>
+          </div>
         </div>
       ),
     },
@@ -139,9 +139,11 @@ const ParallexPage = () => {
       subtitle: "Subtitle 4",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xs">Project 2023-B</p>
-          <p className="font-mono text-xs">sharelinks.info</p>
-          <p className="font-mono text-xs">- a link in bio</p>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
+            <p className="font-mono text-xs">Project/ 2023-B</p>
+            <p className="font-mono text-xs">sharelinks .info</p>
+            <p className="font-mono text-xs">- a link in bio</p>
+          </div>
         </div>
       ),
     },
@@ -151,9 +153,11 @@ const ParallexPage = () => {
       subtitle: "Subtitle 5",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xs">Project 2023-C</p>
-          <p className="font-mono text-xs">solat.eth</p>
-          <p className="font-mono text-xs">- a react native prayer time app</p>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
+            <p className="font-mono text-xs">Project/ 2023-C</p>
+            <p className="font-mono text-xs">solat.eth</p>
+            <p className="font-mono text-xs">- a react native prayer time app</p>
+          </div>
         </div>
       ),
     },
@@ -163,12 +167,14 @@ const ParallexPage = () => {
       subtitle: "Subtitle 6",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-           <p className="font-mono text-xs">Things I&apos;ve coded for fun / iv test previously</p>
-          <div className="flex flex-col gap-2 flex-wrap">
-            <a href="https://moviereviewsmy.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">A - a movie ranking web</a>
-            <a href="https://sayapniaga.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">B - a car dealership MVP</a>
-            <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">C - an interview test ui</a>
-            <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">D - a mockup coffee shop</a>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
+            <p className="font-mono text-xs">Things I&apos;ve coded for fun / iv test previously</p>
+            <div className="flex flex-col gap-2 flex-wrap">
+              <a href="https://moviereviewsmy.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">A - a movie ranking web</a>
+              <a href="https://sayapniaga.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">B - a car dealership MVP</a>
+              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">C - an interview test ui</a>
+              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">D - a mockup coffee shop</a>
+            </div>
           </div>
         </div>
       ),
@@ -181,42 +187,54 @@ const ParallexPage = () => {
         <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="font-mono text-3xl justify-start lg:mr-[140px]">Contact</p>
           <div className="flex flex-col gap-6">
+            
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
+              <button value="phoneSection" onClick={() => contactSectionHandler("phoneSection")}>
+                <div className="flex">
+                  <PhoneIcon className="text-white bg-gradient-to-r from-green-700 to-emerald-400 rounded-full self-center p-[0.7rem] min-w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
+                  <div className="bg-neutral-900/[85%] ml-4 w-[100%] p-2 rounded">
+                    <div className="flex flex-col items-start h-[60px]">
+                      <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Phone</span>
+                      <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest">+60127710626</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </motion.div>
+
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
                 <button value="emailSection" onClick={() => contactSectionHandler("emailSection")}>
                   <div className="flex">
-                    <InboxIcon className="text-white bg-gradient-to-r from-sky-600 to-sky-400 rounded-full self-center p-[0.7rem] w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
-                    <div className="flex flex-col ml-4 items-start h-[60px]">
-                      <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Email</span>
-                      <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest">solah.eth@gmail.com</span>
+                    <InboxIcon className="text-white bg-gradient-to-r from-sky-700 to-sky-400 rounded-full self-center p-[0.7rem] min-w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
+                    <div className="bg-neutral-900/[85%] ml-4 w-[100%] p-2 rounded">
+                      <div className="flex flex-col items-start h-[60px]">
+                        <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Email</span>
+                        <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest">solah.eth@gmail.com</span>
+                      </div>
                     </div>
                   </div>
                 </button>
               </motion.div>
               
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
-                <button value="phoneSection" onClick={() => contactSectionHandler("phoneSection")}>
                   <div className="flex">
-                    <PhoneIcon className="text-white bg-gradient-to-r from-emerald-600 to-emerald-400 rounded-full self-center p-[0.7rem] w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
-                    <div className="flex flex-col ml-4 items-start h-[60px]">
-                      <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Phone</span>
-                      <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest">+60127710626</span>
-                    </div>
-                  </div>
-                </button>
-              </motion.div>
-
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
-                  <div className="flex">
-                    <MapIcon className="text-white bg-gradient-to-r from-amber-600 to-amber-400 rounded-full self-center p-[0.7rem] min-w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
-                    <div className="flex flex-col ml-4 items-start h-[60px] gap-2">
-                      <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Location</span>
-                      <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest text-start">Kuala Lumpur, Malaysia 📍</span>
-                      <span className="flex items-center text-white font-mono text-[10px] h-[30px] text-[8px] px-4 tracking-widest text-start">Okay with relocating ✅</span>
+                    <MapPinIcon className="text-white bg-gradient-to-r from-red-700 to-red-400 rounded-full self-center p-[0.7rem] min-w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
+                    <div className="bg-neutral-900/[85%] ml-4 w-[100%] h-[135%] p-2 rounded">
+                      <div className="flex flex-col items-start h-[60px] gap-2">
+                        <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Location</span>
+                        <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest text-start">Kuala Lumpur, Malaysia 📍</span>
+                        <span className="flex items-center text-white font-mono text-[10px] h-[30px] text-[8px] px-4 tracking-widest text-start">Okay with relocating ✅</span>
+                      </div>
                     </div>
                   </div>
               </motion.div>
             </div>
 
+            <div className="fixed bottom-0 left-0 bg-red-4000 p-5">
+              <button onClick={() => {homeRef.current!.scrollIntoView({ behavior: 'smooth' })}} className="bg-neutral-900 w-[50px] h-[50px] rounded flex items-center justify-center">
+                <span><ChevronDoubleUpIcon className="w-[40px] h-[40px] text-white/20"/></span>
+              </button>
+            </div>
         </div>
       ),
     },
@@ -224,7 +242,7 @@ const ParallexPage = () => {
 
   return (
     <div className="flex flex-col">
-      <motion.div whileTap={{scale: 0.95}} className="fixed w-full z-40">
+      <motion.div className="fixed w-full z-40">
         <RightMenu scrollToSection={scrollToSection} />
       </motion.div>
       {imageData.map((data) => (
