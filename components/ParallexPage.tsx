@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform, MotionValue } from "framer-motion";
 import BlobAnimation from "./BlobAnimation";
 import RightMenu from "./RightMenu";
-import { MapPinIcon, InboxIcon, PhoneIcon, ChevronDoubleUpIcon } from "@heroicons/react/20/solid";
+import { MapPinIcon, InboxIcon, PhoneIcon, ChevronDoubleUpIcon, GlobeAsiaAustraliaIcon } from "@heroicons/react/20/solid";
 
 
 const BlobImageParallax = ({ id }: { id: number }) => {
@@ -99,7 +99,7 @@ const ParallexPage = () => {
             <div className="flex flex-col lg:flex-row lg:gap-2">
               <span className="font-mono text-xs">based in</span>
               <span className="font-mono text-xs">Kuala Lumpur,</span>
-              <span className="font-mono text-xs">Malaysia 📍</span>
+              <span className="font-mono text-xs flex gap-1">Malaysia <GlobeAsiaAustraliaIcon className="w-[12px]" /></span>
             </div>
           </div>
         </div>
@@ -127,8 +127,11 @@ const ParallexPage = () => {
         <div ref={projectsRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
             <p className="font-mono text-xs">Project/ 2023-A</p>
-            <p className="font-mono text-xs">kasutkicks .com</p>
-            <p className="font-mono text-xs">- a sneaker marketplace with a price checker</p>
+            <p className="flex">
+              <span className="hidden lg:inline font-mono text-xs">kasutkicks.com</span>
+              <span className="lg:hidden font-mono text-xs">kasutkicks<br/>.com</span>
+            </p>
+            <p className="font-mono text-xs">// a sneaker marketplace with a price checker</p>
           </div>
         </div>
       ),
@@ -141,8 +144,11 @@ const ParallexPage = () => {
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
             <p className="font-mono text-xs">Project/ 2023-B</p>
-            <p className="font-mono text-xs">sharelinks .info</p>
-            <p className="font-mono text-xs">- a link in bio</p>
+            <p className="flex">
+              <span className="hidden lg:inline font-mono text-xs">sharelinks.info</span>
+              <span className="lg:hidden font-mono text-xs">sharelinks<br/>.info</span>
+            </p>
+            <p className="font-mono text-xs">// a link in bio</p>
           </div>
         </div>
       ),
@@ -155,8 +161,11 @@ const ParallexPage = () => {
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
             <p className="font-mono text-xs">Project/ 2023-C</p>
-            <p className="font-mono text-xs">solat.eth</p>
-            <p className="font-mono text-xs">- a react native prayer time app</p>
+            <p className="flex">
+              <span className="hidden lg:inline font-mono text-xs">solat.eth</span>
+              <span className="lg:hidden font-mono text-xs">solat<br/>.eth</span>
+            </p>
+            <p className="font-mono text-xs">// a prayer time mobile app</p>
           </div>
         </div>
       ),
@@ -170,10 +179,10 @@ const ParallexPage = () => {
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
             <p className="font-mono text-xs">Things I&apos;ve coded for fun / iv test previously</p>
             <div className="flex flex-col gap-2 flex-wrap">
-              <a href="https://moviereviewsmy.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">A - a movie ranking web</a>
-              <a href="https://sayapniaga.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">B - a car dealership MVP</a>
-              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">C - an interview test ui</a>
-              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs">D - a mockup coffee shop</a>
+              <a href="https://moviereviewsmy.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">A - a movie ranking web</a>
+              <a href="https://sayapniaga.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-400 underline underline-offset-2">B - a car dealership MVP</a>
+              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">C - an interview test ui</a>
+              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-400 underline underline-offset-2">D - a mockup coffee shop</a>
             </div>
           </div>
         </div>
@@ -222,7 +231,7 @@ const ParallexPage = () => {
                     <div className="bg-neutral-900/[85%] ml-4 w-[100%] h-[135%] p-2 rounded">
                       <div className="flex flex-col items-start h-[60px] gap-2">
                         <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Location</span>
-                        <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest text-start">Kuala Lumpur, Malaysia 📍</span>
+                        <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest text-start">Kuala Lumpur, Malaysia </span>
                         <span className="flex items-center text-white font-mono text-[10px] h-[30px] text-[8px] px-4 tracking-widest text-start">Okay with relocating ✅</span>
                       </div>
                     </div>
@@ -231,9 +240,9 @@ const ParallexPage = () => {
             </div>
 
             <div className="fixed bottom-0 left-0 bg-red-4000 p-5">
-              <button onClick={() => {homeRef.current!.scrollIntoView({ behavior: 'smooth' })}} className="bg-neutral-900 w-[50px] h-[50px] rounded flex items-center justify-center">
+              <motion.button whileTap={{ scale: 0.80 }} whileHover={{ scale: 1.1 }} onClick={() => {homeRef.current!.scrollIntoView({ behavior: 'smooth' })}} className="bg-neutral-900 w-[50px] h-[50px] rounded flex items-center justify-center">
                 <span><ChevronDoubleUpIcon className="w-[40px] h-[40px] text-white/20"/></span>
-              </button>
+              </motion.button>
             </div>
         </div>
       ),
