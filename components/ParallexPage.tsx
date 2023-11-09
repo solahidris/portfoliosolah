@@ -36,7 +36,7 @@ function ImageParallex({ id }: { id: number }) {
   return (
     <section className="w-full w-[60%] lg:w-[50%]">
       <div ref={ref} className="w-full bg-transparent lg:ml-[-300px]">
-        <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>
+        {id !== 8 && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
       </div>
       <motion.h2 style={{ y }} className="absolute right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
     </section>
@@ -51,7 +51,7 @@ const ParallexPage = () => {
     restDelta: 0.001
   });
 
-  // Ref ID Initialization
+  // Ref ID Initialization - CAN DELETE THE REF IN THE DIV TOO LATER
   const homeRef = useRef<HTMLDivElement | null>(null);
   const techStackRef = useRef<HTMLDivElement | null>(null);
   const projectsRef = useRef<HTMLDivElement | null>(null);
@@ -205,9 +205,9 @@ const ParallexPage = () => {
       title: "Title 7",
       subtitle: "Subtitle 7",
       content: (
-        <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end min-h-screen">
+        <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
 
-          <p className="absolute right-2 mb-[60vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Contact</p>
+          <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Contact</p>
           <div className="flex flex-col gap-6">
             
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
@@ -253,6 +253,16 @@ const ParallexPage = () => {
             </div>
 
  
+        </div>
+      ),
+    },
+    {
+      id: 8,
+      title: "Title 8",
+      subtitle: "Subtitle 8",
+      content: (
+        <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+          <p className="font-mono text-xl text-center w-[100vw] lg:w-[30%] flex justify-center">Thanks for browsing</p>
         </div>
       ),
     },
