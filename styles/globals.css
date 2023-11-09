@@ -181,7 +181,7 @@ code {
 
 /* PARALLEX ------ */
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 
 /* PARALLEX 100vh default h ------ */
@@ -224,7 +224,8 @@ img {
   right: 0;
   height: 5px;
   background: var(--accent);
-  bottom: 100px;
+  bottom: 50px;
+  z-index: 20;
 }
 
 .container {
