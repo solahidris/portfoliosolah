@@ -205,9 +205,9 @@ const ParallexPage = () => {
       title: "Title 7",
       subtitle: "Subtitle 7",
       content: (
-        <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+        <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end min-h-screen">
 
-          <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Contact</p>
+          <p className="absolute right-2 mb-[60vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Contact</p>
           <div className="flex flex-col gap-6">
             
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
@@ -238,7 +238,7 @@ const ParallexPage = () => {
                 </button>
               </motion.div>
               
-              <div className="flex justify-start z-20">
+              <div className="flex justify-start z-20 ">
                   <div className="flex">
                     <MapPinIcon className="text-white bg-gradient-to-r from-red-700 to-red-400 rounded-full self-center p-[0.7rem] min-w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
                     <div className="bg-neutral-900/[85%] ml-4 w-[100%] h-[130%] p-2 rounded">
