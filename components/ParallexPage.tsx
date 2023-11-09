@@ -57,18 +57,18 @@ const ParallexPage = () => {
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLDivElement | null>(null);
 
-  // Scroll to Section from Menu List
-  const scrollToSection = (ref: string) => {
-    if (ref === 'homeDiv' && techStackRef.current) {
-      homeRef.current!.scrollIntoView({ behavior: 'smooth' });
-    } else if (ref === 'techStackDiv' && projectsRef.current) {
-      techStackRef.current!.scrollIntoView({ behavior: 'smooth' });
-    } else if (ref === 'projectsDiv' && contactRef.current) {
-      projectsRef.current!.scrollIntoView({ behavior: 'smooth' });
-    } else if (ref === 'contactDiv' && contactRef.current) {
-      contactRef.current!.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // // Scroll to Section from Menu List
+  // const scrollToSection = (ref: string) => {
+  //   if (ref === 'homeDiv' && techStackRef.current) {
+  //     homeRef.current!.scrollIntoView({ behavior: 'smooth' });
+  //   } else if (ref === 'techStackDiv' && projectsRef.current) {
+  //     techStackRef.current!.scrollIntoView({ behavior: 'smooth' });
+  //   } else if (ref === 'projectsDiv' && contactRef.current) {
+  //     projectsRef.current!.scrollIntoView({ behavior: 'smooth' });
+  //   } else if (ref === 'contactDiv' && contactRef.current) {
+  //     contactRef.current!.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   // Contact Section Email & Phone functions
   const contactSectionHandler = (value:any) => {
@@ -261,7 +261,7 @@ const ParallexPage = () => {
   return (
     <div className="flex flex-col z-10 px-2 relative min-h-screen"> 
       
-      <RightMenu scrollToSection={scrollToSection} />
+      {/* <RightMenu scrollToSection={scrollToSection} /> */}
 
       {imageData.map((data) => (
         <div key={data.id} className="flex">
