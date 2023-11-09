@@ -93,7 +93,8 @@ const ParallexPage = () => {
       subtitle: "Subtitle 1",
       content: (
         <div ref={homeRef} className="w-[40%] lg:w-[50%] ml-5 flex flex-col justify-center items-start lg:items-end">
-          <div className="absolute bg-neutral-900/[85%] w-[35%] p-2 rounded">
+          <p className="absolute right-2 mb-[220px] lg:mb-[350px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Profile</p>
+          <div className="absolute bg-neutral-900/[85%] w-[35%] p-3 rounded">
             <p className="font-mono text-xs">Hi, I&#39;m Sol</p>
             <p className="font-mono text-xs">A self taught Front-end Developer</p>
             <div className="flex flex-col lg:flex-row lg:gap-2">
@@ -111,10 +112,11 @@ const ParallexPage = () => {
       subtitle: "Subtitle 2",
       content: (
         <div ref={techStackRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
+          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Tech Stack</p>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">These are my Tech Stacks</p>
             <p className="font-mono text-xs">I can make full stack applications</p>
-            <p className="font-mono text-xs">But I enjoy doing frontend just a bit more</p>
+            <span className="font-mono text-xs">But I enjoy doing frontend just a bit more</span>
           </div>
         </div>
       ),
@@ -125,13 +127,14 @@ const ParallexPage = () => {
       subtitle: "Subtitle 3",
       content: (
         <div ref={projectsRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
+          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Projects</p>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-A</p>
             <p className="flex">
               <a href="https://www.kasutkicks.com/" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">kasutkicks.com</a>
               <a href="https://www.kasutkicks.com/" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">kasutkicks<br/>.com</a>
             </p>
-            <p className="font-mono text-xs">{"// a sneaker marketplace with a price checker"}</p>
+            <span className="font-mono text-xs">{"// a sneaker marketplace with a price checker"}</span>
           </div>
         </div>
       ),
@@ -142,13 +145,14 @@ const ParallexPage = () => {
       subtitle: "Subtitle 4",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
+          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Projects</p>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-B</p>
             <p className="flex">
               <a href="https://www.sharelinks.info/" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">sharelinks.info</a>
               <a href="https://www.sharelinks.info/" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">sharelinks<br/>.info</a>
             </p>
-            <p className="font-mono text-xs">{"// a link in bio"}</p>
+            <span className="font-mono text-xs">{"// a link in bio"}</span>
           </div>
         </div>
       ),
@@ -159,13 +163,14 @@ const ParallexPage = () => {
       subtitle: "Subtitle 5",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
+          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Projects</p>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-C</p>
             <p className="flex">
               <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">solat.eth</a>
               <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">solat<br/>.eth</a>
             </p>
-            <p className="font-mono text-xs">{"// a prayer time mobile app"}</p>
+            <span className="font-mono text-xs">{"// a prayer time mobile app"}</span>
           </div>
         </div>
       ),
@@ -176,7 +181,8 @@ const ParallexPage = () => {
       subtitle: "Subtitle 6",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
+          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Other Projects</p>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Things I&apos;ve coded for fun / iv test previously</p>
             <div className="flex flex-col gap-2 flex-wrap">
               <a href="https://kasutkicks-nft.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">A - a reverse gas fee NFT minting page</a>
@@ -195,7 +201,8 @@ const ParallexPage = () => {
       subtitle: "Subtitle 7",
       content: (
         <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xl justify-start lg:mr-[140px]">Contact</p>
+          {/* <p className="font-mono text-xl justify-start lg:mr-[140px]">Contact</p> */}
+          <p className="absolute right-2 mb-[320px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Contact</p>
           <div className="flex flex-col gap-6">
             
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
@@ -252,7 +259,7 @@ const ParallexPage = () => {
 
   return (
     <div className="flex flex-col z-10 px-2"> 
-      <motion.div className="fixed w-full z-20">
+      <motion.div className="fixed w-full z-40">
         <RightMenu scrollToSection={scrollToSection} />
       </motion.div>
       {imageData.map((data) => (
