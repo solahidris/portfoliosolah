@@ -39,13 +39,13 @@ const RightMenu: React.FC<RightMenuProps> = ({ scrollToSection }) => {
     },
     {
       name: "Tech Stack",
-      description: "Things I use to code features",
+      description: "Tools I use to code features",
       ref: "techStackDiv", // This is the section ID you want to scroll to
       icon: IdentificationIcon,
     },
     {
       name: "Projects",
-      description: "Solutions I've made to my own problems",
+      description: "Solutions I've created",
       ref: "projectsDiv", // This is the section ID you want to scroll to
       icon: CommandLineIcon,
     },

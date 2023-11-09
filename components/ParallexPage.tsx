@@ -128,8 +128,8 @@ const ParallexPage = () => {
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
             <p className="font-mono text-xs">Project/ 2023-A</p>
             <p className="flex">
-              <span className="hidden lg:inline font-mono text-xs">kasutkicks.com</span>
-              <span className="lg:hidden font-mono text-xs">kasutkicks<br/>.com</span>
+              <a href="https://www.kasutkicks.com/" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">kasutkicks.com</a>
+              <a href="https://www.kasutkicks.com/" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">kasutkicks<br/>.com</a>
             </p>
             <p className="font-mono text-xs">{"// a sneaker marketplace with a price checker"}</p>
           </div>
@@ -145,8 +145,8 @@ const ParallexPage = () => {
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
             <p className="font-mono text-xs">Project/ 2023-B</p>
             <p className="flex">
-              <span className="hidden lg:inline font-mono text-xs">sharelinks.info</span>
-              <span className="lg:hidden font-mono text-xs">sharelinks<br/>.info</span>
+              <a href="https://www.sharelinks.info/" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">sharelinks.info</a>
+              <a href="https://www.sharelinks.info/" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">sharelinks<br/>.info</a>
             </p>
             <p className="font-mono text-xs">{"// a link in bio"}</p>
           </div>
@@ -162,8 +162,8 @@ const ParallexPage = () => {
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
             <p className="font-mono text-xs">Project/ 2023-C</p>
             <p className="flex">
-              <span className="hidden lg:inline font-mono text-xs">solat.eth</span>
-              <span className="lg:hidden font-mono text-xs">solat<br/>.eth</span>
+              <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">solat.eth</a>
+              <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">solat<br/>.eth</a>
             </p>
             <p className="font-mono text-xs">{"// a prayer time mobile app"}</p>
           </div>
@@ -179,10 +179,11 @@ const ParallexPage = () => {
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-2 rounded">
             <p className="font-mono text-xs">Things I&apos;ve coded for fun / iv test previously</p>
             <div className="flex flex-col gap-2 flex-wrap">
-              <a href="https://moviereviewsmy.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">A - a movie ranking web</a>
-              <a href="https://sayapniaga.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-400 underline underline-offset-2">B - a car dealership MVP</a>
-              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">C - an interview test ui</a>
-              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-400 underline underline-offset-2">D - a mockup coffee shop</a>
+              <a href="https://kasutkicks-nft.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">A - a reverse gas fee NFT minting page</a>
+              <a href="https://moviereviewsmy.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-400 underline underline-offset-2">B - a movie ranking web</a>
+              <a href="https://sayapniaga.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">C - a car dealership MVP</a>
+              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-400 underline underline-offset-2">D - an interview test ui</a>
+              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">E - a mockup coffee shop</a>
             </div>
           </div>
         </div>
@@ -194,7 +195,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 7",
       content: (
         <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-3xl justify-start lg:mr-[140px]">Contact</p>
+          <p className="font-mono text-xl justify-start lg:mr-[140px]">Contact</p>
           <div className="flex flex-col gap-6">
             
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
@@ -203,8 +204,8 @@ const ParallexPage = () => {
                   <PhoneIcon className="text-white bg-gradient-to-r from-green-700 to-emerald-400 rounded-full self-center p-[0.7rem] min-w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
                   <div className="bg-neutral-900/[85%] ml-4 w-[100%] p-2 rounded">
                     <div className="flex flex-col items-start h-[60px]">
-                      <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Phone</span>
-                      <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest">+60127710626</span>
+                      <span className="text-white font-mono font-bold px-4 text-sm lg:text-[20px] h-[30px] tracking-widest">Phone</span>
+                      <span className="flex items-center bg-blue-300/10 rounded text-cyan-200 font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest">+60127710626</span>
                     </div>
                   </div>
                 </div>
@@ -217,26 +218,26 @@ const ParallexPage = () => {
                     <InboxIcon className="text-white bg-gradient-to-r from-sky-700 to-sky-400 rounded-full self-center p-[0.7rem] min-w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
                     <div className="bg-neutral-900/[85%] ml-4 w-[100%] p-2 rounded">
                       <div className="flex flex-col items-start h-[60px]">
-                        <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Email</span>
-                        <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest">solah.eth@gmail.com</span>
+                        <span className="text-white font-mono font-bold px-4 text-sm lg:text-[20px] h-[30px] tracking-widest">Email</span>
+                        <span className="flex items-center bg-blue-300/10 rounded text-cyan-200 font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest">solah.eth@gmail.com</span>
                       </div>
                     </div>
                   </div>
                 </button>
               </motion.div>
               
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
+              <div className="flex justify-start z-20">
                   <div className="flex">
                     <MapPinIcon className="text-white bg-gradient-to-r from-red-700 to-red-400 rounded-full self-center p-[0.7rem] min-w-[60px] h-[60px] lg:p-[0.8rem] lg:w-[60px] lg:h-[60px]"/>
-                    <div className="bg-neutral-900/[85%] ml-4 w-[100%] h-[135%] p-2 rounded">
+                    <div className="bg-neutral-900/[85%] ml-4 w-[100%] h-[130%] p-2 rounded">
                       <div className="flex flex-col items-start h-[60px] gap-2">
-                        <span className="text-white font-mono font-bold px-4 lg:text-[20px] h-[30px] tracking-widest">Location</span>
+                        <span className="text-white font-mono font-bold px-4 text-sm lg:text-[20px] h-[30px] tracking-widest">Location</span>
                         <span className="flex items-center bg-blue-300/10 rounded text-white font-mono text-[10px] h-[30px] lg:text-[0.7rem] px-4 tracking-widest text-start">Kuala Lumpur, Malaysia </span>
                         <span className="flex items-center text-white font-mono text-[10px] h-[30px] text-[8px] px-4 tracking-widest text-start">Okay with relocating ✅</span>
                       </div>
                     </div>
                   </div>
-              </motion.div>
+              </div>
             </div>
 
             <div className="fixed bottom-0 left-0 bg-red-4000 p-5">
@@ -250,8 +251,8 @@ const ParallexPage = () => {
   ];
 
   return (
-    <div className="flex flex-col">
-      <motion.div className="fixed w-full z-40">
+    <div className="flex flex-col z-10 px-2"> 
+      <motion.div className="fixed w-full z-20">
         <RightMenu scrollToSection={scrollToSection} />
       </motion.div>
       {imageData.map((data) => (
