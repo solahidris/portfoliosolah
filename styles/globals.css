@@ -184,9 +184,9 @@ html {
   scroll-snap-type: y proximity;
 }
 
-/* PARALLEX ------ */
+/* PARALLEX 100vh default h ------ */
 section {
-  height: 100vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
