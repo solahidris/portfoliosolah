@@ -5,7 +5,7 @@ import ParallexPage from "@/components/ParallexPage";
 
 export default function Home() {
   return (
-    <div className="min-h-[700vh] w-[100vw]">
+    <div className="min-h-screen flex flex-col">
       <ThreeDObject />
       <ParallexPage />
     </div>

@@ -58,13 +58,13 @@ const ParallexPage = () => {
 
   // Scroll to Section from Menu List
   const scrollToSection = (ref: string) => {
-    if (ref === 'homeDiv' && techStackRef.current) {
+    if (ref === 'homeDiv') {
       homeRef.current!.scrollIntoView({ behavior: 'smooth' });
-    } else if (ref === 'techStackDiv' && projectsRef.current) {
+    } else if (ref === 'techStackDiv') {
       techStackRef.current!.scrollIntoView({ behavior: 'smooth' });
-    } else if (ref === 'projectsDiv' && contactRef.current) {
+    } else if (ref === 'projectsDiv') {
       projectsRef.current!.scrollIntoView({ behavior: 'smooth' });
-    } else if (ref === 'contactDiv' && contactRef.current) {
+    } else if (ref === 'contactDiv') {
       contactRef.current!.scrollIntoView({ behavior: 'smooth' });
     }
   };
@@ -258,10 +258,10 @@ const ParallexPage = () => {
   ];
 
   return (
-    <div className="flex flex-col z-10 px-2"> 
-      <motion.div className="absolute w-full z-40">
+    <div className="flex flex-col z-10 px-2 relative min-h-screen"> 
+      <div className="absolute top-0 left-0 w-full z-40">
         <RightMenu scrollToSection={scrollToSection} />
-      </motion.div>
+      </div>
       {imageData.map((data) => (
         <div key={data.id} className="flex">
           {data.content}
@@ -278,7 +278,7 @@ const ParallexPage = () => {
       </div>
       
       {/* Footer - Scroll to Top Function */}
-      <div className="fixed bottom-0 left-0 bg-red-4000 p-5">
+      <div className="fixed bottom-0 left-0 bg-red-4000 p-5 z-[200px]">
         <motion.button whileTap={{ scale: 0.80 }} whileHover={{ scale: 1.1 }} onClick={() => {homeRef.current!.scrollIntoView({ behavior: 'smooth' })}} className="bg-neutral-900 w-[50px] h-[50px] rounded flex items-center justify-center">
           <span><ChevronDoubleUpIcon className="w-[40px] h-[40px] text-white/20"/></span>
         </motion.button>
