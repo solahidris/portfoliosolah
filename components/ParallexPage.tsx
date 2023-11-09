@@ -130,8 +130,8 @@ const ParallexPage = () => {
             <p className="flex">
               <span className="hidden lg:inline font-mono text-xs">kasutkicks.com</span>
               <span className="lg:hidden font-mono text-xs">kasutkicks<br/>.com</span>
-            </p>
-            <p className="font-mono text-xs">// a sneaker marketplace with a price checker</p>
+            </p> */}
+            <p className="font-mono text-xs">{"// a sneaker marketplace with a price checker"}</p>
           </div>
         </div>
       ),
@@ -148,7 +148,7 @@ const ParallexPage = () => {
               <span className="hidden lg:inline font-mono text-xs">sharelinks.info</span>
               <span className="lg:hidden font-mono text-xs">sharelinks<br/>.info</span>
             </p>
-            <p className="font-mono text-xs">// a link in bio</p>
+            <p className="font-mono text-xs">{"// a link in bio"}</p>
           </div>
         </div>
       ),
@@ -165,7 +165,7 @@ const ParallexPage = () => {
               <span className="hidden lg:inline font-mono text-xs">solat.eth</span>
               <span className="lg:hidden font-mono text-xs">solat<br/>.eth</span>
             </p>
-            <p className="font-mono text-xs">// a prayer time mobile app</p>
+            <p className="font-mono text-xs">{"// a prayer time mobile app"}</p>
           </div>
         </div>
       ),
