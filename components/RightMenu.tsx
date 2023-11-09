@@ -67,8 +67,11 @@ const RightMenu: React.FC<RightMenuProps> = ({ scrollToSection }) => {
   return (
     <Popover as={Fragment}>
       <Popover.Button 
-        className="inline-flex items-center gap-x-1 text-xs font-mono leading-6 text-white absolute z-40 bg-neutral-900/30 hover:bg-neutral-900 w-full flex justify-center px-10 py-4 shadow-md"
-        onClick={() => setIsOpen(!isOpen)} // Toggle the menu on click
+        className="inline-flex items-center gap-x-1 text-xs font-mono leading-6 text-white absolute z-40 bg-neutral-900/30 hover:bg-neutral-900 w-full flex justify-center px-10 py-4 shadow-md ml-[-8px]"
+        onClick={() => {
+          setIsOpen(!isOpen)
+          window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top of the page
+        }} // Toggle the menu on click
       >
         <span className="font-mono ">solah.eth</span>
         <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />

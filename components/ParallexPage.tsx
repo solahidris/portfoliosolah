@@ -7,6 +7,7 @@ import BlobAnimation from "./BlobAnimation";
 import RightMenu from "./RightMenu";
 import { MapPinIcon, InboxIcon, PhoneIcon, ChevronDoubleUpIcon, GlobeAsiaAustraliaIcon } from "@heroicons/react/20/solid";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import PageFooter from "./PageFooter";
 
 const BlobImageParallax = ({ id }: { id: number }) => {
   const ref = useRef(null);
@@ -30,7 +31,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
 function ImageParallex({ id }: { id: number }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
+  const y = useParallax(scrollYProgress, 30);
 
   return (
     <section className="w-full w-[60%] lg:w-[50%]">
@@ -58,13 +59,13 @@ const ParallexPage = () => {
 
   // Scroll to Section from Menu List
   const scrollToSection = (ref: string) => {
-    if (ref === 'homeDiv') {
+    if (ref === 'homeDiv' && techStackRef.current) {
       homeRef.current!.scrollIntoView({ behavior: 'smooth' });
-    } else if (ref === 'techStackDiv') {
+    } else if (ref === 'techStackDiv' && projectsRef.current) {
       techStackRef.current!.scrollIntoView({ behavior: 'smooth' });
-    } else if (ref === 'projectsDiv') {
+    } else if (ref === 'projectsDiv' && contactRef.current) {
       projectsRef.current!.scrollIntoView({ behavior: 'smooth' });
-    } else if (ref === 'contactDiv') {
+    } else if (ref === 'contactDiv' && contactRef.current) {
       contactRef.current!.scrollIntoView({ behavior: 'smooth' });
     }
   };
@@ -259,11 +260,9 @@ const ParallexPage = () => {
 
   return (
     <div className="flex flex-col z-10 px-2 relative min-h-screen"> 
-
-      <div className="absolute top-0 left-0 w-full z-40">
-        <RightMenu scrollToSection={scrollToSection} />
-      </div>
       
+      <RightMenu scrollToSection={scrollToSection} />
+
       {imageData.map((data) => (
         <div key={data.id} className="flex">
           {data.content}
@@ -272,19 +271,7 @@ const ParallexPage = () => {
         </div>
       ))}
       <motion.div className="progress" style={{ scaleX }} />
-
-      {/* Footer - Github and Linkedin */}
-      {/* <div className="fixed bottom-0 flex left-0 mb-6 ml-[100px] gap-x-4 justify-start lg:justify-start">
-        <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} ><a target="_blank" rel="noreferrer" href="https://github.com/solahidris"><SiGithub className="w-[1.7rem] h-[1.7rem] lg:w-[2rem] lg:h-[2rem] hover:text-yellow-300 text-neutral-100/50"/></a></motion.button>
-        <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} ><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/solahuddinidris/"><SiLinkedin className="w-[1.7rem] h-[1.7rem] lg:w-[2rem] lg:h-[2rem] hover:text-cyan-300 text-neutral-100/50"/></a></motion.button>
-      </div> */}
-      
-      {/* Footer - Scroll to Top Function */}
-      {/* <div className="fixed bottom-0 left-0 bg-red-4000 p-5 z-[200px]">
-        <motion.button whileTap={{ scale: 0.80 }} whileHover={{ scale: 1.1 }} onClick={() => {homeRef.current!.scrollIntoView({ behavior: 'smooth' })}} className="bg-neutral-900 w-[50px] h-[50px] rounded flex items-center justify-center">
-          <span><ChevronDoubleUpIcon className="w-[40px] h-[40px] text-white/20"/></span>
-        </motion.button>
-      </div> */}
+      {/* <PageFooter /> */}
       
     </div>
   );
