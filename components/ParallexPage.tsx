@@ -34,7 +34,7 @@ function ImageParallex({ id }: { id: number }) {
 
   return (
     <section className="w-full w-[60%] lg:w-[50%]">
-      <div ref={ref} className="w-full bg-transparent lg:ml-[-180px]">
+      <div ref={ref} className="w-full bg-transparent lg:ml-[-300px]">
         <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>
       </div>
       <motion.h2 style={{ y }} className="absolute right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
@@ -93,7 +93,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 1",
       content: (
         <div ref={homeRef} className="w-[40%] lg:w-[50%] ml-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[220px] lg:mb-[350px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Profile</p>
+          <p className="absolute right-2 mb-[220px] lg:mb-[350px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[280px]">Profile</p>
           <div className="absolute bg-neutral-900/[85%] w-[35%] p-3 rounded">
             <p className="font-mono text-xs">Hi, I&#39;m Sol</p>
             <p className="font-mono text-xs">A self taught Front-end Developer</p>
@@ -112,7 +112,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 2",
       content: (
         <div ref={techStackRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Tech Stack</p>
+          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[280px]">Tech Stack</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">These are my Tech Stacks</p>
             <p className="font-mono text-xs">I can make full stack applications</p>
@@ -127,7 +127,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 3",
       content: (
         <div ref={projectsRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Projects</p>
+          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[280px]">Projects</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-A</p>
             <p className="flex">
@@ -145,7 +145,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 4",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Projects</p>
+          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[280px]">Projects</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-B</p>
             <p className="flex">
@@ -163,7 +163,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 5",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Projects</p>
+          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[280px]">Projects</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-C</p>
             <p className="flex">
@@ -181,7 +181,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 6",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Other Projects</p>
+          <p className="absolute right-2 mb-[360px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[280px]">Other Projects</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Things I&apos;ve coded for fun / iv test previously</p>
             <div className="flex flex-col gap-2 flex-wrap">
@@ -202,7 +202,7 @@ const ParallexPage = () => {
       content: (
         <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           {/* <p className="font-mono text-xl justify-start lg:mr-[140px]">Contact</p> */}
-          <p className="absolute right-2 mb-[320px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[180px]">Contact</p>
+          <p className="absolute right-2 mb-[320px] lg:mb-[450px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[280px]">Contact</p>
           <div className="flex flex-col gap-6">
             
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
