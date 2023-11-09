@@ -8,6 +8,7 @@ interface RightMenuProps {
 }
 
 const RightMenu: React.FC<RightMenuProps> = ({ scrollToSection }) => {
+  
   const menuRouteHandler = (ref: string) => {
     if (scrollToSection) {
       scrollToSection(ref);

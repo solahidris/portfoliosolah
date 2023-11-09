@@ -263,7 +263,7 @@ const ParallexPage = () => {
       <div className="absolute top-0 left-0 w-full z-40">
         <RightMenu scrollToSection={scrollToSection} />
       </div>
-
+      
       {imageData.map((data) => (
         <div key={data.id} className="flex">
           {data.content}
