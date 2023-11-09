@@ -120,7 +120,7 @@ const ParallexPage = () => {
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">These are my Tech Stacks</p>
             <p className="font-mono text-xs">I can make full stack applications</p>
-            <span className="font-mono text-xs">But I enjoy doing frontend just a bit more</span>
+            <p className="font-mono text-xs h-[50px] lg:h-[0px] lg:mb-[15px]">But I enjoy doing frontend just a bit more</p>
           </div>
         </div>
       ),
