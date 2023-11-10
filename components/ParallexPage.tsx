@@ -8,6 +8,7 @@ import RightMenu from "./RightMenu";
 import { MapPinIcon, InboxIcon, PhoneIcon, ChevronDoubleUpIcon, GlobeAsiaAustraliaIcon } from "@heroicons/react/20/solid";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import PageFooter from "./PageFooter";
+import ProfileCards from "./ProfileCards";
 
 const BlobImageParallax = ({ id }: { id: number }) => {
   const ref = useRef(null);
@@ -36,7 +37,7 @@ function ImageParallex({ id }: { id: number }) {
   return (
     <section className="w-full w-[60%] lg:w-[50%]">
       <div ref={ref} className="w-full bg-transparent lg:ml-[-300px]">
-        {id !== 8 && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
+        {(id !== 8 && id !== 9) && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
       </div>
       <motion.h2 style={{ y }} className="absolute right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
     </section>
@@ -264,6 +265,16 @@ const ParallexPage = () => {
         <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="font-mono text-xl text-center w-[100vw] lg:w-[30%] flex justify-center">Thanks for browsing</p>
         </div>
+      ),
+    },
+    {
+      id: 9,
+      title: "Title 9",
+      subtitle: "Subtitle 9",
+      content: (
+        <div>
+          <ProfileCards />
+      </div>
       ),
     },
   ];
