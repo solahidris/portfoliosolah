@@ -35,9 +35,9 @@ function ImageParallex({ id }: { id: number }) {
   const y = useParallax(scrollYProgress, 30);
 
   return (
-    <section className="w-full w-[60%] lg:w-[50%]">
+    <section className={`w-full ${(id === 9) ? "w-[8%]" : "w-[60%] lg:w-[50%]"}`}>
       <div ref={ref} className="w-full bg-transparent lg:ml-[-300px]">
-        {(id !== 8 && id !== 9) && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
+        {(id !== 8 && id !== 9 ) && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
       </div>
       <motion.h2 style={{ y }} className="absolute right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
     </section>
@@ -274,7 +274,7 @@ const ParallexPage = () => {
       content: (
         <div>
           <ProfileCards />
-      </div>
+        </div>
       ),
     },
   ];
