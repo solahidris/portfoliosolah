@@ -194,7 +194,7 @@ const ParallexPage = () => {
               <a href="https://moviereviewsmy.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-400 underline underline-offset-2">B - a movie ranking web</a>
               <a href="https://sayapniaga.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">C - a car dealership MVP</a>
               <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-400 underline underline-offset-2">D - an interview test ui</a>
-              <a href="https://countrydarkmode.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">E - a mockup coffee shop</a>
+              <a href="https://coffeeandkicks.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-cyan-200 underline underline-offset-2">E - a mockup coffee shop</a>
             </div>
           </div>
         </div>
