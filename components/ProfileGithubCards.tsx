@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const ProfileCards = () => {
+const ProfileGithubCards = () => {
   const [profileImage, setProfileImage] = useState<string>('');
   const [reposPerLanguageImage, setReposPerLanguageImage] = useState<string>('');
   const [mostCommitLanguageImage, setMostCommitLanguageImage] = useState<string>('');
@@ -69,33 +69,40 @@ const ProfileCards = () => {
   }, []);
 
   return (
-    <div>
-      <div className="relative bg-blue-100/10 p-2">
-        <p>Profile Details</p>
-        {profileImage && <img src={profileImage} alt="Profile Details" className="relative w-[100vw] p-2 bg-cyan-400" />}
+    <div className="p-2 flex flex-col min-h-[100vh] flex justify-center lg:items-center lg:mt-[-80px] lg:min-w-[90vw]">
+        <span className="font-mono text-sm lg:text-xl tracking-widest pb-4 lg:ml-[-600px]">Profile Summary</span>
+        {/* Profile Details */}
+      <div className="relative">
+        {profileImage && <img src={profileImage} alt="Profile Details" 
+        className="relative w-[100vw] lg:w-[41.7vw] rounded-md shadow shadow-cyan-300/50 shadow-offset-x-8" />}
       </div>
+      <div className="grid grid-cols-2 gap-2 lg:gap-8 lg:pt-8 pt-2">
+          {/* Repos Per Language */}
+        <div className="relative">
+          {reposPerLanguageImage && <img src={reposPerLanguageImage} alt="Repos Per Language" 
+          className="relative w-[100vw] lg:w-[20vw] rounded-md shadow shadow-cyan-200/50 shadow-offset-x-8" />}
+        </div>
 
-      <div className="relative bg-blue-100/10 p-2">
-        <p>Repos Per Language</p>
-        {reposPerLanguageImage && <img src={reposPerLanguageImage} alt="Repos Per Language" className="relative w-[100vw] p-2 bg-cyan-400" />}
-      </div>
+          {/* Top Languages Commits */}
+        <div className="relative">
+          {mostCommitLanguageImage && <img src={mostCommitLanguageImage} alt="Top Languages Commits" 
+          className="relative w-[100vw] lg:w-[20vw] rounded-md shadow shadow-cyan-200/50 shadow-offset-x-8" />}
+        </div>
 
-      <div className="relative bg-blue-100/10 p-2">
-        <p>Top Languages Commits</p>
-        {mostCommitLanguageImage && <img src={mostCommitLanguageImage} alt="Top Languages Commits" className="relative w-[100vw] p-2 bg-cyan-400" />}
-      </div>
+          {/* Stats */}
+        <div className="relative">
+          {statsImage && <img src={statsImage} alt="Stats" 
+          className="relative w-[100vw] lg:w-[20vw] rounded-md shadow shadow-cyan-200/50 shadow-offset-x-8" />}
+        </div>
 
-      <div className="relative bg-blue-100/10 p-2">
-        <p>Stats</p>
-        {statsImage && <img src={statsImage} alt="Stats" className="relative w-[100vw] p-2 bg-cyan-400" />}
-      </div>
-
-      <div className="relative bg-blue-100/10 p-2">
-        <p>Productive Time</p>
-        {productiveTimeImage && <img src={productiveTimeImage} alt="Productive Time" className="relative w-[100vw] p-2 bg-cyan-400" />}
+          {/* Productive Time */}
+        <div className="relative">
+          {productiveTimeImage && <img src={productiveTimeImage} alt="Productive Time" 
+          className="relative w-[100vw] lg:w-[20vw] rounded-md shadow shadow-cyan-200/50 shadow-offset-x-8" />}
+        </div>
       </div>
     </div>
   );
 };
 
-export default ProfileCards;
+export default ProfileGithubCards;

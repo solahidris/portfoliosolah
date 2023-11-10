@@ -8,7 +8,7 @@ import RightMenu from "./RightMenu";
 import { MapPinIcon, InboxIcon, PhoneIcon, ChevronDoubleUpIcon, GlobeAsiaAustraliaIcon } from "@heroicons/react/20/solid";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import PageFooter from "./PageFooter";
-import ProfileCards from "./ProfileCards";
+import ProfileGithubCards from "./ProfileGithubCards";
 
 const BlobImageParallax = ({ id }: { id: number }) => {
   const ref = useRef(null);
@@ -35,9 +35,9 @@ function ImageParallex({ id }: { id: number }) {
   const y = useParallax(scrollYProgress, 30);
 
   return (
-    <section className={`w-full ${(id === 9) ? "w-[8%]" : "w-[60%] lg:w-[50%]"}`}>
+    <section className={` ${(id === 3) ? "w-[8%]" : "w-full w-[60%] lg:w-[50%]"}`}>
       <div ref={ref} className="w-full bg-transparent lg:ml-[-300px]">
-        {(id !== 8 && id !== 9 ) && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
+        {(id !== 3 && id !== 9 ) && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
       </div>
       <motion.h2 style={{ y }} className="absolute right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
     </section>
@@ -132,6 +132,19 @@ const ParallexPage = () => {
       title: "Title 3",
       subtitle: "Subtitle 3",
       content: (
+        <div>
+          <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+            <p className="absolute right-2 mt-[40vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Github</p>
+          </div>
+          <ProfileGithubCards />
+        </div>
+      ),
+    },
+    {
+      id: 4,
+      title: "Title 4",
+      subtitle: "Subtitle 4",
+      content: (
         <div ref={projectsRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
@@ -146,9 +159,9 @@ const ParallexPage = () => {
       ),
     },
     {
-      id: 4,
-      title: "Title 4",
-      subtitle: "Subtitle 4",
+      id: 5,
+      title: "Title 5",
+      subtitle: "Subtitle 5",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
@@ -164,9 +177,9 @@ const ParallexPage = () => {
       ),
     },
     {
-      id: 5,
-      title: "Title 5",
-      subtitle: "Subtitle 5",
+      id: 6,
+      title: "Title 6",
+      subtitle: "Subtitle 6",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
@@ -182,9 +195,9 @@ const ParallexPage = () => {
       ),
     },
     {
-      id: 6,
-      title: "Title 6",
-      subtitle: "Subtitle 6",
+      id: 7,
+      title: "Title 7",
+      subtitle: "Subtitle 7",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Other Projects</p>
@@ -202,9 +215,9 @@ const ParallexPage = () => {
       ),
     },
     {
-      id: 7,
-      title: "Title 7",
-      subtitle: "Subtitle 7",
+      id: 8,
+      title: "Title 8",
+      subtitle: "Subtitle 8",
       content: (
         <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
 
@@ -258,22 +271,12 @@ const ParallexPage = () => {
       ),
     },
     {
-      id: 8,
-      title: "Title 8",
-      subtitle: "Subtitle 8",
-      content: (
-        <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xl text-center w-[100vw] lg:w-[30%] flex justify-center">Thanks for browsing</p>
-        </div>
-      ),
-    },
-    {
       id: 9,
       title: "Title 9",
       subtitle: "Subtitle 9",
       content: (
-        <div>
-          <ProfileCards />
+        <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+          <p className="font-mono text-xl text-center w-[100vw] lg:w-[30%] flex justify-center">Thanks for browsing</p>
         </div>
       ),
     },
