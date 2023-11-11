@@ -4,14 +4,20 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect } from "react";
 
-const LoadingPage = () => {
+interface LoadingPageProps {
+  isLoading: boolean;
+}
+
+const LoadingPage: React.FC<LoadingPageProps> = ({isLoading}) => {
 
   const count = useMotionValue(0); // Initialize Count at 0
   const rounded = useTransform(count, Math.round); // Rounded numbers
   useEffect(() => {
-    const animation = animate(count, 100, { duration: 4 }); // Animate counting
-    return animation.stop; // Stop
-  }, []);
+    if (isLoading) {
+      const animation = animate(count, 100, { duration: 4 }); // Animate counting for 4 seconds
+      return () => animation.stop(); // Stop the animation on unmount
+    }
+  }, [isLoading, count]);
 
   const barWidth = useTransform(count, [0, 96], ["0%", "96%"]); // Translate count to width
 
