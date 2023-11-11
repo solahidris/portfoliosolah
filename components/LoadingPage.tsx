@@ -19,22 +19,26 @@ const LoadingPage: React.FC<LoadingPageProps> = ({isLoading}) => {
     }
   }, [isLoading, count]);
 
-  const barWidth = useTransform(count, [0, 96], ["0%", "96%"]); // Translate count to width
+  const barWidth = useTransform(count, [0, 97], ["0%", "97%"]); // Translate count to width
 
 
   return(
     <div className="flex flex-col gap-0 justify-center items-center min-h-screen pb-[120px]">
       
-      <motion.div initial={{ opacity:0, scale:0.75 }} animate={{ opacity:1, scale:1 }} transition={{ duration: 0.7, delay: 0.5 }} 
-      className="flex flex-col justify-center items-center gap-4 pb-6">
-        <AiOutlineLoading3Quarters className="w-5 h-5 lg:w-6 lg:h-6 animate-spin w-full"/>
-        <span className="font-mono tracking-widest animate-pulse">Loading...</span>
-      </motion.div>
+      <div
+      className="flex flex-col justify-center items-center gap-0 pb-0 mb-[-50px]">
+        <div dangerouslySetInnerHTML={{
+          __html: `
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://lottie.host/d1578c28-8a4e-47d9-b9c3-08e715a10616/bNZvqUVdpO.json" background="transparent" speed="1" style="width: 200px; height: 200px" loop autoplay direction="1" mode="normal"></lottie-player>
+          `
+        }}></div>
+      </div>
 
       {/* Load bar animation */}
-      <div className="mt-[18px] w-64 h-[30px] bg-neutral-200/90 rounded-md">
+      <div className="mt-[18px] w-64 h-[30px] bg-neutral-600/90 rounded-md">
         <motion.div
-          className="w-64 h-[22px] ml-[4px] mt-[4px] bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 rounded-md"
+          className="w-64 h-[22px] ml-[4px] mt-[4px] bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-400 rounded-md"
           style={{ width: barWidth }}
         />
       </div>
