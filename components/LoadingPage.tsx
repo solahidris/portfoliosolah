@@ -10,15 +10,24 @@ interface LoadingPageProps {
 
 const LoadingPage: React.FC<LoadingPageProps> = ({isLoading}) => {
 
+  const loadLottieScript = () => {
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js';
+    script.async = true;
+    document.body.appendChild(script);
+  };
+
   const count = useMotionValue(0); // Initialize Count at 0
   const rounded = useTransform(count, Math.round); // Rounded numbers
   useEffect(() => {
     if (isLoading) {
       const animation = animate(count, 100, { duration: 4 }); // Animate counting for 4 seconds
+      loadLottieScript(); // Load Lottie Scripts
+
       return () => animation.stop(); // Stop the animation on unmount
     }
   }, [isLoading, count]);
-
+  
   const barWidth = useTransform(count, [0, 97], ["0%", "97%"]); // Translate count to width
 
 
