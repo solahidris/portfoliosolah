@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false); // Set loading to false after
-    }, 2000); // Time duration - 0.5s
+    }, 4000); // Time duration - 0.5s
 
     // Clear the timeout on component unmount
     return () => clearTimeout(timeout);
