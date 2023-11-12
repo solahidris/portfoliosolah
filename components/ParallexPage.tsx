@@ -1,19 +1,17 @@
 // directory: ./components/ParallexPage.tsx
 
 import Image from "next/image";
-import { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform, MotionValue } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, useScroll, useSpring, useTransform, MotionValue, Variants, useMotionValue } from "framer-motion";
 import BlobAnimation from "./BlobAnimation";
-import RightMenu from "./RightMenu";
-import { MapPinIcon, InboxIcon, PhoneIcon, ChevronDoubleUpIcon, GlobeAsiaAustraliaIcon } from "@heroicons/react/20/solid";
+import { MapPinIcon, InboxIcon, PhoneIcon, GlobeAsiaAustraliaIcon } from "@heroicons/react/20/solid";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import PageFooter from "./PageFooter";
 import ProfileGithubCards from "./ProfileGithubCards";
 
 const BlobImageParallax = ({ id }: { id: number }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
+  const y = useParallax(scrollYProgress, 250);
 
   return (
     <section className="w-full w-[60%] lg:w-[50%]">
@@ -33,43 +31,41 @@ function ImageParallex({ id }: { id: number }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 150);
+  
+  const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+  const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
 
   return (
     <section className={` ${(id === 3) ? "w-[8%]" : "w-full w-[60%] lg:w-[50%]"}`}>
-      <div ref={ref} className="w-full bg-transparent lg:ml-[-300px]">
-        {(id !== 3 && id !== 9 ) && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
-      </div>
+      <motion.div
+        initial={false}
+        animate={
+          isLoaded && isInView
+            ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+            : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+        }
+        transition={{ duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true }}
+        onViewportEnter={() => setIsInView(true)}
+        ref={ref} className="w-full bg-transparent lg:ml-[-300px]"
+      >
+        {(id !== 3 && id !== 9 ) && <Image onLoad={() => setIsLoaded(true)} src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
+      </motion.div>
       <motion.h2 style={{ y }} className="absolute right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
     </section>
   );
 }
 
 const ParallexPage = () => {
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
-
-  // Ref ID Initialization - CAN DELETE THE REF IN THE DIV TOO LATER
-  const homeRef = useRef<HTMLDivElement | null>(null);
-  const techStackRef = useRef<HTMLDivElement | null>(null);
-  const projectsRef = useRef<HTMLDivElement | null>(null);
-  const contactRef = useRef<HTMLDivElement | null>(null);
-
-  // // Scroll to Section from Menu List
-  // const scrollToSection = (ref: string) => {
-  //   if (ref === 'homeDiv' && techStackRef.current) {
-  //     homeRef.current!.scrollIntoView({ behavior: 'smooth' });
-  //   } else if (ref === 'techStackDiv' && projectsRef.current) {
-  //     techStackRef.current!.scrollIntoView({ behavior: 'smooth' });
-  //   } else if (ref === 'projectsDiv' && contactRef.current) {
-  //     projectsRef.current!.scrollIntoView({ behavior: 'smooth' });
-  //   } else if (ref === 'contactDiv' && contactRef.current) {
-  //     contactRef.current!.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // };
 
   // Contact Section Email & Phone functions
   const contactSectionHandler = (value:any) => {
@@ -94,7 +90,7 @@ const ParallexPage = () => {
       title: "Title 1",
       subtitle: "Subtitle 1",
       content: (
-        <div ref={homeRef} className="w-[40%] lg:w-[50%] ml-5 flex flex-col justify-center items-start lg:items-end">
+        <div className="w-[40%] lg:w-[50%] ml-5 flex flex-col justify-center items-start lg:items-end">
           <p className="absolute right-2 mb-[220px] lg:mb-[350px] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[280px]">Profile</p>
           <div className="absolute bg-neutral-900/[85%] w-[35%] p-3 rounded">
             <p className="font-mono text-xs">Hi, I&#39;m Sol</p>
@@ -117,7 +113,7 @@ const ParallexPage = () => {
       title: "Title 2",
       subtitle: "Subtitle 2",
       content: (
-        <div ref={techStackRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+        <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Tech Stack</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">These are my Tech Stacks</p>
@@ -145,7 +141,7 @@ const ParallexPage = () => {
       title: "Title 4",
       subtitle: "Subtitle 4",
       content: (
-        <div ref={projectsRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+        <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-A</p>
@@ -219,7 +215,7 @@ const ParallexPage = () => {
       title: "Title 8",
       subtitle: "Subtitle 8",
       content: (
-        <div ref={contactRef} className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+        <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
 
           <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Contact</p>
           <div className="flex flex-col gap-6">
@@ -275,7 +271,7 @@ const ParallexPage = () => {
       title: "Title 9",
       subtitle: "Subtitle 9",
       content: (
-        <div ref={contactRef} className="min-h-[100vh] w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+        <div className="min-h-[100vh] w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="font-mono text-xl text-center w-[100vw] lg:w-[30%] flex justify-center">Thanks for browsing</p>
         </div>
       ),
@@ -284,8 +280,6 @@ const ParallexPage = () => {
 
   return (
     <div className="flex flex-col z-10 px-2 relative min-h-screen"> 
-      
-      {/* <RightMenu scrollToSection={scrollToSection} /> */}
 
       {imageData.map((data) => (
         <div key={data.id} className="flex">
@@ -295,7 +289,6 @@ const ParallexPage = () => {
         </div>
       ))}
       <motion.div className="progress" style={{ scaleX }} />
-      {/* <PageFooter /> */}
       
     </div>
   );

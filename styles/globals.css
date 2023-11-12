@@ -45,6 +45,7 @@ body {
 
   --background: var(--ash-black);
   --accent: var(--white);
+  --accentWheel: var(--sky);
 
   margin: 0;
   padding: 0;
@@ -242,4 +243,3 @@ canvas {
   image-rendering: pixelated;
   image-rendering: optimize-contrast;
 }
-
