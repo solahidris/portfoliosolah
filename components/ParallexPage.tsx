@@ -302,7 +302,7 @@ const ParallexPage = () => {
       title: "Title 9",
       subtitle: "Subtitle 9",
       content: (
-        <div className="min-h-[100vh] w-[85%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+        <div className="min-h-[100vh] w-[85%] lg:w-[85%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <button value="emailSection" onClick={() => contactSectionHandler("emailSection")} className="font-mono text-xl text-center w-[100vw] lg:w-[50%] flex justify-center">
             <span className="font-mono text-cyan-300" >Email me</span>
           </button>
