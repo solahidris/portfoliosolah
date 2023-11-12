@@ -297,6 +297,19 @@ const ParallexPage = () => {
         </div>
       ),
     },
+    {
+      id: 9,
+      title: "Title 9",
+      subtitle: "Subtitle 9",
+      content: (
+        <div className="min-h-[100vh] w-[85%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+          <button value="emailSection" onClick={() => contactSectionHandler("emailSection")} className="font-mono text-xl text-center w-[100vw] lg:w-[50%] flex justify-center">
+            <span className="font-mono text-cyan-300" >Email me</span>
+          </button>
+          <p className="font-mono text-sm text-center w-[100vw] lg:w-[50%] flex justify-center pt-2">if you think im a great fit</p>
+        </div>
+      ),
+    },
   ];
 
   return (
