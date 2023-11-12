@@ -32,7 +32,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
 function ImageParallex({ id }: { id: number }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 30);
+  const y = useParallax(scrollYProgress, 150);
 
   return (
     <section className={` ${(id === 3) ? "w-[8%]" : "w-full w-[60%] lg:w-[50%]"}`}>
