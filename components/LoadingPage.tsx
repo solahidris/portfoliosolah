@@ -3,9 +3,10 @@
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect } from "react";
-import Image from "next/image";
-import LottieAnimationNyan from "./LottieAnimationNyan";
-import LottieAnimationLoading from "./LottieAnimationLoading";
+import lottieLoading from "../public/lottie-loading.json";
+import lottieNyan from "../public/lottie-nyan.json";
+import Lottie from "lottie-react";
+
 
 interface LoadingPageProps {
   isLoading: boolean;
@@ -39,8 +40,12 @@ const LoadingPage: React.FC<LoadingPageProps> = ({isLoading}) => {
       
       <div
       className="flex flex-col justify-center items-center gap-0 pb-0 mb-[-50px]">
-        <LottieAnimationNyan />
-        <LottieAnimationLoading />
+        <div className="relative top-0 w-[50%] pb-5">
+          <Lottie animationData={lottieLoading} loop={true} />
+        </div>
+        <div className="absolute bottom-0">
+          <Lottie animationData={lottieNyan} loop={true} />
+        </div>
       </div>
 
       {/* Load bar animation */}
