@@ -1,12 +1,15 @@
 // directory: ./components/ParallexPage.tsx
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useSpring, useTransform, MotionValue, Variants, useMotionValue } from "framer-motion";
 import BlobAnimation from "./BlobAnimation";
 import { MapPinIcon, InboxIcon, PhoneIcon, GlobeAsiaAustraliaIcon } from "@heroicons/react/20/solid";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import ProfileGithubCards from "./ProfileGithubCards";
+
+import { scroll } from "framer-motion/dom";
+
 
 const BlobImageParallax = ({ id }: { id: number }) => {
   const ref = useRef(null);
@@ -66,6 +69,30 @@ const ParallexPage = () => {
     damping: 30,
     restDelta: 0.001,
   });
+  // NEW CODE = START
+ // Grab the progress wheel
+ const progressWheel = document.querySelector<SVGSVGElement>('.progress');
+
+ // Using useEffect to handle updates based on scroll progress
+ useEffect(() => {
+   const updateStrokeDasharray = () => {
+     if (progressWheel) {
+       const progress = scrollYProgress.get(); // Get the current progress
+       progressWheel.style.strokeDasharray = `${progress}, 1`; // Update the strokeDasharray
+     }
+   };
+
+   // Listen for changes in scroll progress
+   const unsubscribe = scrollYProgress.on("change", updateStrokeDasharray);
+  //  const unsubscribeY = y.on("change", updateOpacity)
+
+
+   // Cleanup function
+   return () => {
+     unsubscribe(); // Remove the listener when the component unmounts
+   };
+ }, [progressWheel, scrollYProgress]);
+  // NEW CODE = END
 
   // Contact Section Email & Phone functions
   const contactSectionHandler = (value:any) => {
@@ -280,7 +307,10 @@ const ParallexPage = () => {
 
   return (
     <div className="flex flex-col z-10 px-2 relative min-h-screen"> 
-
+      <svg width="50" height="50" viewBox="0 0 100 100" className="progress-wheel">
+        <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
+        <circle cx="50" cy="50" r="30" pathLength="1" className="progress" />
+      </svg>
       {imageData.map((data) => (
         <div key={data.id} className="flex">
           {data.content}

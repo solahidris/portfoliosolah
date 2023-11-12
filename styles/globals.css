@@ -243,3 +243,30 @@ canvas {
   image-rendering: pixelated;
   image-rendering: optimize-contrast;
 }
+
+/* WHEEL PROGRESS  */
+.progress-wheel {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-90deg);
+}
+
+/* WHEEL PROGRESS  */
+.progress-wheel circle {
+  stroke-dashoffset: 0;
+  stroke-width: 20%;
+  fill: none;
+}
+
+/* WHEEL PROGRESS  */
+.progress-wheel .bg {
+  stroke: var(--accentWheel);
+  opacity: 0.2;
+}
+
+/* WHEEL PROGRESS  */
+.progress-wheel .progress {
+  stroke: var(--accentWheel);
+  stroke-dasharray: 0, 1;
+}
