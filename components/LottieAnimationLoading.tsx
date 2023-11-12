@@ -19,4 +19,6 @@ const LottieAnimation = () => {
   );
 };
 
+// NPM INSTALL FORCE
+
 export default LottieAnimation;
