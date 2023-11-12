@@ -69,30 +69,24 @@ const ParallexPage = () => {
     damping: 30,
     restDelta: 0.001,
   });
-  // NEW CODE = START
- // Grab the progress wheel
+
+ // Wheel Progress - Grab the progress wheel
  const progressWheel = document.querySelector<SVGSVGElement>('.progress');
 
- // Using useEffect to handle updates based on scroll progress
+ // Wheel Progress - Using useEffect to handle updates based on scroll progress
  useEffect(() => {
-   const updateStrokeDasharray = () => {
-     if (progressWheel) {
-       const progress = scrollYProgress.get(); // Get the current progress
-       progressWheel.style.strokeDasharray = `${progress}, 1`; // Update the strokeDasharray
-     }
-   };
+  const timeout = setTimeout(() => {
+  }, 4000);
 
-   // Listen for changes in scroll progress
-   const unsubscribe = scrollYProgress.on("change", updateStrokeDasharray);
-  //  const unsubscribeY = y.on("change", updateOpacity)
+  const progressWheel = document.querySelector<SVGSVGElement>('.progress');
+  scroll((progress) => {
+    if (progressWheel) {
+      progressWheel.style.strokeDasharray = `${progress}, 1`;
+    }
+  });
 
-
-   // Cleanup function
-   return () => {
-     unsubscribe(); // Remove the listener when the component unmounts
-   };
- }, [progressWheel, scrollYProgress]);
-  // NEW CODE = END
+  return () => clearTimeout(timeout);
+}, [scrollYProgress]);
 
   // Contact Section Email & Phone functions
   const contactSectionHandler = (value:any) => {
