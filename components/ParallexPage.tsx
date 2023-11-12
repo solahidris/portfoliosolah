@@ -49,7 +49,7 @@ function ImageParallex({ id }: { id: number }) {
             ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
             : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
         }
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
         onViewportEnter={() => setIsInView(true)}
         ref={ref} className="w-full bg-transparent lg:ml-[-300px]"
