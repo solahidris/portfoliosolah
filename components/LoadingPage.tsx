@@ -37,14 +37,10 @@ const LoadingPage: React.FC<LoadingPageProps> = ({isLoading}) => {
   return(
     <div className="flex flex-col gap-0 justify-center items-center min-h-screen pb-[120px]">
       
-      <div
-      className="flex flex-col justify-center items-center gap-0 pb-0 mb-[-50px]">
+      <div className="flex flex-col justify-center items-center gap-0 pb-0 pt-[100px] mb-[-50px]">
         <div className="relative top-0 w-[50%] lg:max-w-[20%] pb-5">
           <Lottie animationData={lottieLoading} loop={true} />
         </div>
-        {/* <div className="absolute bottom-0 lg:max-w-[30%] bg-blue-000">
-          <Lottie animationData={lottieNyan} loop={true} />
-        </div> */}
       </div>
 
       {/* Load bar animation */}
