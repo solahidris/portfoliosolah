@@ -291,8 +291,8 @@ const ParallexPage = () => {
       title: "Title 9",
       subtitle: "Subtitle 9",
       content: (
-        <div className="min-h-[100vh] w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="font-mono text-xl text-center w-[100vw] lg:w-[30%] flex justify-center">Thanks for browsing</p>
+        <div className="min-h-[100vh] w-[40%] lg:w-[80%] pl-5 flex flex-col justify-center items-start lg:items-end">
+          <p className="font-mono text-xl text-center w-[100vw] lg:w-[50%] pb-5 lg:pb-20 flex justify-center">Thanks for browsing</p>
         </div>
       ),
     },
