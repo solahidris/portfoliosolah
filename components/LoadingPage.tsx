@@ -1,6 +1,5 @@
 // component/LoadingPage.tsx
 
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect } from "react";
 import lottieLoading from "../public/lottie-loading.json";
@@ -43,9 +42,9 @@ const LoadingPage: React.FC<LoadingPageProps> = ({isLoading}) => {
         <div className="relative top-0 w-[50%] lg:max-w-[20%] pb-5">
           <Lottie animationData={lottieLoading} loop={true} />
         </div>
-        <div className="absolute bottom-0 lg:max-w-[30%] bg-blue-000">
+        {/* <div className="absolute bottom-0 lg:max-w-[30%] bg-blue-000">
           <Lottie animationData={lottieNyan} loop={true} />
-        </div>
+        </div> */}
       </div>
 
       {/* Load bar animation */}
