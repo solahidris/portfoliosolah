@@ -225,7 +225,7 @@ img {
   right: 0;
   height: 5px;
   background: var(--accent);
-  bottom: 50px;
+  bottom: 100px;
   z-index: 20;
 }
 

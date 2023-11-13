@@ -33,7 +33,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
 function ImageParallex({ id }: { id: number }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 150);
+  const y = useParallax(scrollYProgress, 300);
 
   return (
     <section className={` ${(id === 3) ? "w-[8%]" : "w-full w-[60%] lg:w-[50%]"}`}>
@@ -121,7 +121,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 2",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Tech Stack</p>
+          <p className="absolute right-2 mb-[58vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Tech Stack</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">These are my Tech Stacks</p>
             <p className="font-mono text-xs">Full-stack applications development</p>
@@ -149,7 +149,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 4",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
+          <p className="absolute right-2 mb-[58vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-A</p>
             <p className="flex">
@@ -167,7 +167,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 5",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
+          <p className="absolute right-2 mb-[58vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-B</p>
             <p className="flex">
@@ -185,7 +185,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 6",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
+          <p className="absolute right-2 mb-[58vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-C</p>
             <p className="flex">
@@ -203,7 +203,7 @@ const ParallexPage = () => {
       subtitle: "Subtitle 7",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
-          <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Other Projects</p>
+          <p className="absolute right-2 mb-[58vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Other Projects</p>
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Things I&apos;ve coded for fun / iv test previously</p>
             <div className="flex flex-col gap-2 flex-wrap">
@@ -224,7 +224,7 @@ const ParallexPage = () => {
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
 
-          <p className="absolute right-2 mb-[52vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Contact</p>
+          <p className="absolute right-2 mb-[58vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Contact</p>
           <div className="flex flex-col gap-6">
             
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="flex justify-start z-20">
