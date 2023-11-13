@@ -89,17 +89,19 @@ const ProfileGithubCards = () => {
           className="relative w-[100vw] lg:w-[20vw] rounded-md shadow shadow-cyan-200/50 shadow-offset-x-8" />}
         </div>
 
+          {/* Productive Time */}
+        <div className="relative">
+          {productiveTimeImage && <img src={productiveTimeImage} alt="Productive Time" 
+          className="relative w-[100vw] lg:w-[20vw] rounded-md shadow shadow-cyan-200/50 shadow-offset-x-8" />}
+        </div>
+
           {/* Stats */}
         <div className="relative">
           {statsImage && <img src={statsImage} alt="Stats" 
           className="relative w-[100vw] lg:w-[20vw] rounded-md shadow shadow-cyan-200/50 shadow-offset-x-8" />}
         </div>
 
-          {/* Productive Time */}
-        <div className="relative">
-          {productiveTimeImage && <img src={productiveTimeImage} alt="Productive Time" 
-          className="relative w-[100vw] lg:w-[20vw] rounded-md shadow shadow-cyan-200/50 shadow-offset-x-8" />}
-        </div>
+
       </div>
     </div>
   );

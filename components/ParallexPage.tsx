@@ -40,7 +40,7 @@ function ImageParallex({ id }: { id: number }) {
       <div
         ref={ref} className="w-full bg-transparent lg:ml-[-300px]"
       >
-        {(id !== 3 && id !== 9 ) && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
+        {(id !== 3 && id !== 8 && id !== 9 && id !== 10 ) && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
       </div>
       <motion.h2 style={{ y }} className="absolute right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
     </section>
@@ -287,9 +287,9 @@ const ParallexPage = () => {
       ),
     },
     {
-      id: 9,
-      title: "Title 9",
-      subtitle: "Subtitle 9",
+      id: 10,
+      title: "Title 10",
+      subtitle: "Subtitle 10",
       content: (
         <div className="min-h-[100vh] w-[40%] lg:w-[80%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="font-mono text-xl text-center w-[100vw] lg:w-[50%] pb-5 lg:pb-20 flex justify-center">Thanks for browsing</p>
