@@ -40,7 +40,7 @@ function ImageParallex({ id }: { id: number }) {
       <div
         ref={ref} className="w-full bg-transparent lg:ml-[-300px]"
       >
-        {(id !== 3 && id !== 8 && id !== 9 && id !== 10 ) && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
+        {(id !== 3 && id !== 9 && id !== 10 && id !== 11 ) && <Image src={`/${id}.jpg`} alt="ImageParallex" width={300} height={300} className="min-w-[185px] min-h-[400px] object-contain"/>}
       </div>
       <motion.h2 style={{ y }} className="absolute right-0 lg:right-20 font-mono text-xs">{`#00${id}`}</motion.h2>
     </section>
@@ -189,10 +189,10 @@ const ParallexPage = () => {
           <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
             <p className="font-mono text-xs">Project/ 2023-C</p>
             <p className="flex">
-              <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">solat.eth</a>
-              <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">solat<br/>.eth</a>
+              <a href="https://banzion.com/" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">banzion.com</a>
+              <a href="https://banzion.com/" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">banzion<br/>.com</a>
             </p>
-            <span className="font-mono text-xs">{"// a prayer time mobile app"}</span>
+            <span className="font-mono text-xs">{"// a zionism boycott checker"}</span>
           </div>
         </div>
       ),
@@ -201,6 +201,42 @@ const ParallexPage = () => {
       id: 7,
       title: "Title 7",
       subtitle: "Subtitle 7",
+      content: (
+        <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+          <p className="absolute right-2 mb-[58vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
+          <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
+            <p className="font-mono text-xs">Project/ 2024-A</p>
+            <p className="flex">
+              <a href="https://notesappv3.vercel.app/about" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">notá</a>
+              <a href="https://notesappv3.vercel.app/about" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">notá<br/>.com</a>
+            </p>
+            <span className="font-mono text-xs">{"// a todo list via eisenhower matrix"}</span>
+          </div>
+        </div>
+      ),
+    },
+    // {
+    //   id: 8,
+    //   title: "Title 8",
+    //   subtitle: "Subtitle 8",
+    //   content: (
+    //     <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
+    //       <p className="absolute right-2 mb-[58vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Projects</p>
+    //       <div className="absolute bg-neutral-900/[85%] w-[30%] p-3 rounded">
+    //         <p className="font-mono text-xs">Project/ 2023-C</p>
+    //         <p className="flex">
+    //           <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">solat.eth</a>
+    //           <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">solat<br/>.eth</a>
+    //         </p>
+    //         <span className="font-mono text-xs">{"// a prayer time mobile app"}</span>
+    //       </div>
+    //     </div>
+    //   ),
+    // },
+    {
+      id: 8,
+      title: "Title 8",
+      subtitle: "Subtitle 8",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="absolute right-2 mb-[58vh] lg:text-2xl lg:right-10 font-mono text-xl justify-start lg:mr-[320px]">Other Projects</p>
@@ -218,9 +254,9 @@ const ParallexPage = () => {
       ),
     },
     {
-      id: 8,
-      title: "Title 8",
-      subtitle: "Subtitle 8",
+      id: 9,
+      title: "Title 9",
+      subtitle: "Subtitle 9",
       content: (
         <div className="w-[40%] lg:w-[50%] pl-5 flex flex-col justify-center items-start lg:items-end">
 
@@ -274,9 +310,9 @@ const ParallexPage = () => {
       ),
     },
     {
-      id: 9,
-      title: "Title 9",
-      subtitle: "Subtitle 9",
+      id: 10,
+      title: "Title 10",
+      subtitle: "Subtitle 10",
       content: (
         <div className="min-h-[100vh] w-[85%] lg:w-[85%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <motion.button whileTap={{ scale:0.95 }} whileHover={{ scale:1.1 }} value="emailSection" onClick={() => contactSectionHandler("emailSection")} className="text-center w-[100vw] lg:w-[50%] flex justify-center">
@@ -287,9 +323,9 @@ const ParallexPage = () => {
       ),
     },
     {
-      id: 10,
-      title: "Title 10",
-      subtitle: "Subtitle 10",
+      id: 11,
+      title: "Title 11",
+      subtitle: "Subtitle 11",
       content: (
         <div className="min-h-[100vh] w-[40%] lg:w-[80%] pl-5 flex flex-col justify-center items-start lg:items-end">
           <p className="font-mono text-xl text-center w-[100vw] lg:w-[50%] pb-5 lg:pb-20 flex justify-center">Thanks for browsing</p>
