@@ -192,7 +192,7 @@ const ParallexPage = () => {
               <a href="https://banzion.com/" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">banzion.com</a>
               <a href="https://banzion.com/" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">banzion<br/>.com</a>
             </p>
-            <span className="font-mono text-xs">{"// a zionism boycott checker"}</span>
+            <span className="font-mono text-xs">{"// a blacklist company filter"}</span>
           </div>
         </div>
       ),
@@ -210,7 +210,7 @@ const ParallexPage = () => {
               <a href="https://notesappv3.vercel.app/about" target="_blank" rel="noopener noreferrer" className="hidden lg:inline font-mono text-xs text-cyan-200 underline underline-offset-2">notá</a>
               <a href="https://notesappv3.vercel.app/about" target="_blank" rel="noopener noreferrer" className="lg:hidden font-mono text-xs text-cyan-200 underline underline-offset-2">notá<br/>.com</a>
             </p>
-            <span className="font-mono text-xs">{"// a todo list via eisenhower matrix"}</span>
+            <span className="font-mono text-xs">{"// an eisenhower matrix to-do list"}</span>
           </div>
         </div>
       ),
